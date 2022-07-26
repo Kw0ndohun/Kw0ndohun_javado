@@ -8,3 +8,7 @@
 .column{
     background-color: azure;
 }
+
+#inButton{
+    height: 30vh;
+}

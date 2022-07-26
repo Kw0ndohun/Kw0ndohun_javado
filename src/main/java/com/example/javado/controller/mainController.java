@@ -18,27 +18,5 @@ public class mainController {
         return "main";
     }
 
-    @RequestMapping("/join" )
-    public String join(){
 
-        return "join";
-    }
-
-    @RequestMapping("/njoin")
-    public String njoin(){
-
-        return "njoin";
-    }
-
-    @RequestMapping("/nlogin")
-    public String nlogin(){
-
-        return "nlogin";
-    }
-
-    @RequestMapping("/updateUser")
-    public String updateUser(){
-
-        return "updateUser";
-    }
 }
