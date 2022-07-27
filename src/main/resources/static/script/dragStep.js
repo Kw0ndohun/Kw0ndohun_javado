@@ -8,13 +8,19 @@
 
 //단계 배열과 단계에 맞는 정답 배열이 필요
 let step=1;
+if(sessionStorage.getItem("step")!==null){
+
+}
+console.log(sessionStorage.getItem("step"));
+step=parseInt(sessionStorage.getItem("step"));
 //단계를 통과했는지 최종 체크
 let stepClears=[0,0];
+console.log("step:"+step);
 
 // 각 단계별 정답 갯수 배열을 만들어 answer배열의 정답을 체크
 let stepAnswerCnt=[1,1];
 //정답이 들은 배열
-let answer=["while"];
+let answer=["while","int"];
 //정답을 입력이 입력되면 1로 바뀌어 정답을 맞췄음을 확인하는 배열
 let answerCheck=[0,0];
 
@@ -51,20 +57,20 @@ function stepClearCheck(){
 //드랍이 되면 정답을 검증하고 > 트루를 반환해서 Html에 있는 자바문이 가동되게끔
 
     //드래거블 이동
-const columns = document.querySelectorAll(".column");
-columns.forEach((column) => {
-    new Sortable(column, {
-        group: "shared",
-        animation: 150,
-        ghostClass: "blue-background-class",
-        //드래그가 시작되면
-        onStart:function(e){
-            console.log("됐어");
-        },
-        //드래그한게 놓아지면
-
-    });
-});
+// const columns = document.querySelectorAll(".column");
+// columns.forEach((column) => {
+//     new Sortable(column, {
+//         group: "shared",
+//         animation: 150,
+//         ghostClass: "blue-background-class",
+//         //드래그가 시작되면
+//         onStart:function(e){
+//             console.log("됐어");
+//         },
+//         //드래그한게 놓아지면
+//
+//     });
+// });
 
 //블록들
 const buttons = document.querySelectorAll(".buttons");
@@ -120,6 +126,12 @@ answerDiv.forEach((answerDiv) => {
         }
     });
 });
+
+function nextClick(){
+    step++;
+    location.href=`/main${step}`;
+}
+
 
 //정답 실행화면 세팅 메서드
 setScreen();

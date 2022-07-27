@@ -10,6 +10,9 @@
 }
 
 #inButton{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
     height: 30vh;
     border-radius: 10px;
 }
@@ -78,11 +81,16 @@ ul{
     width: 70px;
     height: 40px;
     position: relative;
-    left: 46%;
+    left: 40%;
 }
 
 #nextStep{
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+
+#answerCon{
+    display: flex;
+    justify-content: center;
 }

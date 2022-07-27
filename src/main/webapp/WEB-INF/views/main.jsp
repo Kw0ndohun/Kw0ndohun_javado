@@ -55,7 +55,7 @@
 </nav>
 <%--학습 진행도 게이지--%>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
 </div>
 
 <%--    버튼목록 --%>
@@ -75,7 +75,7 @@
 
 <%-- 사용할 버튼 드래그로 넣는 곳--%>
 <%--    임시--%>
-<div class="container">
+<div class="container" id="answerCon">
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="answerDiv"></div>
@@ -89,20 +89,6 @@
 
   </div>
 </div>
-
-<%
-  int n=1;
-  while(n==2){
-//    String success=String.valueOf(session.getAttribute("success"));
-//    System.out.println(success);
-    try {
-      Thread.sleep(1000);
-    }
-    catch (Exception e){
-
-    }
-  }
-%>
 
 
 
