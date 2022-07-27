@@ -3,8 +3,23 @@
 }
 
 .Container{
-    background-color: aqua;
+    background-color: white;
 }
 .column{
     background-color: azure;
+}
+
+.alert{
+    bottom: 0%;
+    width: 100vw;
+    position: fixed;
+}
+
+ul{
+    list-style:none;
+}
+
+#login{
+    position: relative;
+    top: 5px;
 }

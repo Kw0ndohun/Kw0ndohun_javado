@@ -3,12 +3,80 @@
 }
 
 .Container{
-    background-color: aqua;
+    background-color: white;
 }
 .column{
-    background-color: azure;
+    background-color: #ffeaa7;
 }
 
 #inButton{
     height: 30vh;
+    border-radius: 10px;
+}
+
+#conScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:410px;
+    height: 410px;
+    background-color: #00cec9;
+}
+.nav-link{
+
+}
+
+.block{
+    width: 80px;
+    height: 80px;
+    /*background-image: url(resources/grass.jpg);*/
+    background-size: 100%;
+    background-color: #81ecec;
+    margin: 1px;
+}
+
+.alert{
+    bottom: 0%;
+    width: 100vw;
+    position: fixed;
+}
+
+.progress{
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    margin-top: 10px;
+
+}
+
+#floor{
+    position: relative;
+    right: 20px;
+    top: 15px;
+}
+
+#login{
+    position: relative;
+    top: 5px;
+}
+
+.answerDiv{
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    position: relative;
+    left: 46%;
 }
