@@ -18,5 +18,11 @@ public class mainController {
         return "main";
     }
 
+    @RequestMapping("/main2" )
+    public String main2(){
+
+        return "main2";
+    }
+
 
 }

@@ -20,7 +20,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">JAVADO</a>
+    <a class="navbar-brand" href="#">Step2</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -110,7 +110,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> Step 1부터 해볼게요. <a href="#" class="alert-link">this important alert message</a>.
+  <strong>좋아요!</strong> Step 2입니다.
 </div>
 
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="location.href='/main2'">Next</button>

@@ -80,3 +80,9 @@ ul{
     position: relative;
     left: 46%;
 }
+
+#nextStep{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

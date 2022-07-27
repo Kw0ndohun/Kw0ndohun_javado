@@ -44,6 +44,8 @@ function stepClearCheck(){
             'success'
         )
         stepClears[step-1]=1;
+        sessionStorage.setItem("success","1");
+        $("#nextStep").attr("class","btn btn-primary");
     }
 }
 //드랍이 되면 정답을 검증하고 > 트루를 반환해서 Html에 있는 자바문이 가동되게끔
