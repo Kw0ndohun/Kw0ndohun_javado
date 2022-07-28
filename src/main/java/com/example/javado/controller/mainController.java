@@ -34,5 +34,34 @@ public class mainController {
 
         return "main4";
     }
+    @RequestMapping("/main5" )
+    public String main5(){
 
+        return "main5";
+    }
+    @RequestMapping("/main6" )
+    public String main6(){
+
+        return "main6";
+    }
+    @RequestMapping("/main7" )
+    public String main7(){
+
+        return "main7";
+    }
+    @RequestMapping("/main8" )
+    public String main8(){
+
+        return "main8";
+    }
+    @RequestMapping("/main9" )
+    public String main9(){
+
+        return "main9";
+    }
+    @RequestMapping("/main10" )
+    public String main10(){
+
+        return "main10";
+    }
 }
