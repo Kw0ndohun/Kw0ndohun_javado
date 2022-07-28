@@ -58,7 +58,7 @@
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
 </div>
 <%--자바가 있는 곳--%>
-<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:220px"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
+<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
 <%--    버튼목록 --%>
 <div class="buttonContainer">
   <div class="buttons">
