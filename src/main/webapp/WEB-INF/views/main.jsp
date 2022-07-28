@@ -20,19 +20,19 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">JAVADO</a>
+    <a class="navbar-brand" href="/">JAVADO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/">Learning
+          <a class="nav-link" href="/">Learning
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Training</a>
+          <a class="nav-link active" href="#">Training</a>
       </ul>
       <form class="d-flex">
         <ul id="floor">
@@ -40,11 +40,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something el</a>
+            <a class="dropdown-item" href="main">step1</a>
+            <a class="dropdown-item" href="main2">step2</a>
+            <a class="dropdown-item" href="main3">step3</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
+            <a class="dropdown-item" href="#">link</a>
           </div>
         </li>
         </ul>
@@ -57,11 +57,12 @@
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
 </div>
-
+<%--자바가 있는 곳--%>
+<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px;"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
 <%--    버튼목록 --%>
 <div class="buttonContainer">
   <div class="buttons">
-    <button type="button" class="btn btn-outline-primary" draggable="true">Int</button>
+    <button type="button" class="btn btn-outline-primary" draggable="true" value="int">Int</button>
     <button type="button" class="btn btn-outline-secondary" draggable="true">String</button>
     <button type="button" class="btn btn-outline-success" draggable="true" value="while">while</button>
     <button type="button" class="btn btn-outline-danger" draggable="true">for</button>
@@ -99,7 +100,7 @@
   <strong>좋아요!</strong> Step 1부터 해볼게요. <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="location.href='/main2'">Next</button>
+<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>
 
 
 <script src="script/dragStep.js"></script>

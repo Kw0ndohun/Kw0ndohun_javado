@@ -8,14 +8,13 @@
 
 //단계 배열과 단계에 맞는 정답 배열이 필요
 let step=1;
-if(sessionStorage.getItem("step")!==null){
-
+step=parseInt(getParameterByName("step"));
+//step 파라미터가 없으면 step은 1을 디폴트로 가진다
+if(getParameterByName("step")===""){
+    step=1;
 }
-console.log(sessionStorage.getItem("step"));
-step=parseInt(sessionStorage.getItem("step"));
 //단계를 통과했는지 최종 체크
 let stepClears=[0,0];
-console.log("step:"+step);
 
 // 각 단계별 정답 갯수 배열을 만들어 answer배열의 정답을 체크
 let stepAnswerCnt=[1,1];
@@ -89,7 +88,6 @@ buttons.forEach((buttons) => {
 
 // 정답 실행 화면 세팅
 const screenContainer=document.body.querySelector('.screenContainer');
-console.log(screenContainer);
 function setScreen(){
     let num=0;
     for(let n=0; n<5; n++){
@@ -98,7 +96,6 @@ function setScreen(){
             bl.setAttribute('class','block');
             bl.setAttribute('id',`b${num}`);
             screenContainer.append(bl);
-            console.log(bl);
             num++;
         }
     }
@@ -122,20 +119,31 @@ answerDiv.forEach((answerDiv) => {
             if(stepClears[step-1]===0){
                 stepClearCheck();
             }
-            console.log("드랍");
         }
     });
 });
 
+// sessionStorage.setItem("step",`${step}`);
 function nextClick(){
     step++;
-    location.href=`/main${step}`;
+    // sessionStorage.setItem("step",`${step}`);
+    nextStep();
 }
-
+function nextStep(){
+    location.href=`/main${step}?step=${step}`;
+}
 
 //정답 실행화면 세팅 메서드
 setScreen();
 
+
+// js url 파라미터 받아오는 메소드 ()파라미터로 스트링을 넣어줘야함.
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 
 

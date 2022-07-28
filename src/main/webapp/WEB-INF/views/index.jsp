@@ -22,14 +22,14 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">JAVADO</a>
+        <a class="navbar-brand" href="">JAVADO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Learning
+                    <a class="nav-link active" href="/">Learning
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -44,13 +44,7 @@
         </div>
     </div>
 </nav>
-    <form>
-<%--        <input type="button" id="logoutBt" value="로그아웃">--%>
-<%--        <input type="button" id="login_" value="n로그인" onclick="location.href='/nlogin'">--%>
-<%--        <input type="button" id="join_" value="n회원가입" onclick="location.href='/njoin'">--%>
-<%--        <input type="button" id="updateUserBn" value="회원정보수정">--%>
-
-    </form>
+<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px;"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
 <%--    버튼목록 --%>
 <div class="buttonContainer">
     <div class="buttons">
