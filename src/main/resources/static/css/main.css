@@ -118,3 +118,10 @@ button{
     border-color: #ffeaa7;
     color: #e17055;
 }
+
+#step1answerDiv{
+    width: 60px;
+}
+#step2answerDiv{
+    width: 90px;
+}

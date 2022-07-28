@@ -137,7 +137,7 @@
 <div class="container" id="answerCon">
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
-      <div class="answerDiv"></div>
+      <div class="answerDiv" id="step2answerDiv"></div>
     </div>
 
   </div>

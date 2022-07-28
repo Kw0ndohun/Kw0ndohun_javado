@@ -176,6 +176,10 @@ answerDiv.forEach((answerDiv) => {
             if(stepClears[step-1]===0){
                 stepClearCheck();
             }
+        },
+        // 블록이 밖으로 나가서 다른 위치로 이동하면 해당 블록 제거
+        onRemove:function (e) {
+          e.item.parentNode.removeChild(e.item);
         }
     });
 });
