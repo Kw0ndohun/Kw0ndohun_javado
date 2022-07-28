@@ -155,7 +155,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step 5예요. 이번 문제도 잘 풀어보아요. <a href="#" class="alert-link">this important alert message</a>.
+  <strong>좋아요!</strong> 이제 Step 5예요. 이번 문제도 잘 풀어보아요.
 </div>
 
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>

@@ -56,7 +56,7 @@
 </nav>
 <%--학습 진행도 게이지--%>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 11%;"></div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 36%;"></div>
 </div>
 <%--자바(캐릭터)가 있는 곳--%>
 <div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
@@ -66,7 +66,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    1이는 문자열에 소속되었지만 한 글자인 1이는 좀 더 자기한테 맞는 한 글자들의 모임에 소속되고 싶어해요. 한 글자의 모임인 블록을 넣어보세요.
+    이제 좀 더 위쪽에 있는 친구의 키와 곱해볼게요. 곱하기 블록을 넣어보세요.
   </div>
 </div>
 
@@ -137,7 +137,7 @@
 <div class="container" id="answerCon">
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
-      <div class="answerDiv" id="step3answerDiv"></div>
+      <div class="answerDiv" id="step8answerDiv"></div>
     </div>
 
   </div>
@@ -155,7 +155,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step 3예요. 이번 문제도 잘 풀어보아요.
+  <strong>좋아요!</strong> 이제 Step 8예요. 이번 문제도 잘 풀어보아요.
 </div>
 
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>

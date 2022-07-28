@@ -6,7 +6,7 @@ let ranCol=Math.floor(Math.random() * 7+1);
 //문자 배열
 let strings=["aa","bb","cc","dd","ee","ff","gg","hh","ii","jj","kk","ll","nn","mm","oo","pp","qq","rr","ss","tt","uu","vv","ww","xx","yy","zz","AA","BB","CC","DD"];
 //정답을 맞추면 나오는 alert 대사 배열
-let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!"];
+let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!","오우 엄청나게 커졌네요!","이제 좀 적당하군요.","좀 크지만 그래도 잘했어요! 기존의 x와는 다르게 *가 곱하기를 뜻해요."];
 
 
 //     $.ajax({
@@ -24,14 +24,14 @@ if(getParameterByName("step")===""){
     step=1;
 }
 //단계를 통과했는지 최종 체크
-let stepClears=[0,0,0,0,0,0];
+let stepClears=[0,0,0,0,0,0,0,0,0];
 
 // 각 단계별 정답 갯수 배열을 만들어 answer배열의 정답을 체크
-let stepAnswerCnt=[1,1,1,1,1,1];
+let stepAnswerCnt=[1,1,1,1,1,1,1,1,1];
 //정답이 들은 배열
-let answer=["int","String","char","long","double","while"];
+let answer=["int","String","char","long","double","+","-","*","while"];
 //정답을 입력이 입력되면 1로 바뀌어 정답을 맞췄음을 확인하는 배열
-let answerCheck=[0,0,0,0,0,0];
+let answerCheck=[0,0,0,0,0,0,0,0,0];
 
 //정답 체크 맥스범위 변수 //sql에 저장? 세션에 저장?/ 현재 단계 전까지의 stepAnswerCnt배열의 값들을 더하면 됨.
 let answerCountCnt=0;
@@ -101,6 +101,8 @@ buttons.forEach((buttons) => {
 
 
 
+// =================== 맵세팅 영역================== //
+
 // 정답 실행 화면 세팅 (맵세팅)
 const screenContainer=document.body.querySelector('.screenContainer');
 function setScreen(){
@@ -129,6 +131,21 @@ function setScreen(){
     }
     else if(step===5){
         setStep5map();
+    }
+    else if(step===6){
+        setStep6map();
+    }
+    else if(step===7){
+        setStep7map();
+    }
+    else if(step===8){
+        setStep8map();
+    }
+    else if(step===9){
+        setStep9map();
+    }
+    else if(step===10){
+        setStep10map();
     }
 }
 //step2일 때 실행화면 세팅
@@ -199,7 +216,7 @@ function setStep4map(){
     $(`#b${13}`).attr("style",`background-color:${colors[4]}`);
     $(`#b${13}`).html(`${1}`);
 }
-//step5일 때 실행되는 화면
+//step5일 때 실행되는 화면 세팅
 function setStep5map(){
     let inNum=2;
     for(let n=1; n<13; n++){
@@ -216,8 +233,62 @@ function setStep5map(){
     $(`#b${13}`).attr("style",`background-color:${colors[5]}`);
     $(`#b${13}`).html(`${1}`);
 }
+//step6일 때 실행되는 화면 세팅
+function setStep6map(){
+    let inNum=2;
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+        $(`#b${n}`).html(`${inNum}`);
+        inNum++;
+    }
+    for(let i=14; i<26; i++){
+        console.log(1);
+        console.log($(`#b${i}`));
+        $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+        $(`#b${i}`).html(`${strings[i]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${1.1}`);
+}
+//step7일 때 실행되는 화면 세팅
+function setStep7map(){
+    let inNum=2;
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+        $(`#b${n}`).html(`${inNum}`);
+        inNum++;
+    }
+    for(let i=14; i<26; i++){
+        console.log(1);
+        console.log($(`#b${i}`));
+        $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+        $(`#b${i}`).html(`${strings[i]}`);
+    }
+    $(`#b${12}`).html('');
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${14.1}`);
+}
+//step8일 때 실행되는 화면 세팅
+function setStep8map(){
+    let inNum=2;
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+        $(`#b${n}`).html(`${inNum}`);
+        inNum++;
+    }
+    for(let i=14; i<26; i++){
+        console.log(1);
+        console.log($(`#b${i}`));
+        $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+        $(`#b${i}`).html(`${strings[i]}`);
+    }
+    $(`#b${12}`).html('');
+    $(`#b${8}`).html('');
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${5.1}`);
+}
 
-
+// =================== 맵세팅 영역================== //
 
 //정답위치
 const answerDiv = document.querySelectorAll(".answerDiv");
@@ -285,6 +356,18 @@ function screenRun(){
     else if(step===5){
         step5run();
     }
+    else if(step===6){
+        step6run();
+    }
+    else if(step===7){
+        step7run();
+    }
+    else if(step===8){
+        step8run();
+    }
+    else if(step===9){
+        step9run();
+    }
     else if(step===10){
         step1go =setInterval(step10run,400);
     }
@@ -306,10 +389,26 @@ function step3run(){
 function step4run(){
     $(`#b${13}`).attr("style",`background-color:${colors[5]}`);
 }
-//step4 실행
+//step5 실행
 function step5run(){
     $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
     $(`#b${13}`).html("1.1");
+}
+//step6 실행
+function step6run(){
+    $(`#b${12}`).html('');
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html("14.1");
+}
+//step7 실행
+function step7run(){
+    $(`#b${8}`).html('');
+    $(`#b${13}`).html("5.1");
+}
+//step8 실행
+function step8run(){
+    $(`#b${3}`).html('');
+    $(`#b${13}`).html("20.4");
 }
 //step10 실행  while
 let blockNum=1;
