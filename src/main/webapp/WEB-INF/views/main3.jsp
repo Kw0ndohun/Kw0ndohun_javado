@@ -33,24 +33,22 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="">Training</a>
+          <a class="nav-link active" href="#">Training</a>
       </ul>
       <form class="d-flex">
-<%--        스텝 드롭다운 부분--%>
         <ul id="floor">
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="main?step=1">step1</a>
-              <a class="dropdown-item" href="main2?step=2">step2</a>
-              <a class="dropdown-item" href="main3?step=3">step3</a>
+              <a class="dropdown-item" href="main">step1</a>
+              <a class="dropdown-item" href="main2">step2</a>
+              <a class="dropdown-item" href="main3">step3</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">link</a>
             </div>
           </li>
         </ul>
-<%-- 우측 로그인부분--%>
         <button class="btn btn-primary my-2 my-sm-0" id="login">login</button>
       </form>
     </div>
@@ -58,9 +56,20 @@
 </nav>
 <%--학습 진행도 게이지--%>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="3" aria-valuemax="100" style="width: 3%;"></div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
 </div>
-<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
+<%--자바(캐릭터)가 있는 곳--%>
+<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+    ↙ Click !!!
+    <span class="visually-hidden">unread messages</span>
+  </span></div>
+<%--콜랩스 자바가 문제를 알려주는 영역--%>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    화면의 칸들의 색깔을 반복해서 채워줘야해요. 반복을 위해서 필요한 블록을 넣어보세요.
+  </div>
+</div>
+
 <%--    버튼목록 --%>
 <div class="buttonContainer">
   <div class="buttons">

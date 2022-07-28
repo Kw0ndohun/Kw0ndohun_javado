@@ -124,7 +124,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-secondary">
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>안녕하세요!</strong> 잘 왔어요! 함께 JAVA를 배워봐요. <a href="#" class="alert-link">this important alert message</a>.
+    <strong>안녕하세요!</strong> 잘 왔어요! 함께 JAVA를 배워봐요.
 </div>
 
 

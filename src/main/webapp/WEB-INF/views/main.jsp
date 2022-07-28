@@ -57,8 +57,18 @@
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
 </div>
-<%--자바가 있는 곳--%>
-<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
+<%--자바(캐릭터)가 있는 곳--%>
+<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+    ↙ Click !!!
+    <span class="visually-hidden">unread messages</span>
+  </span></div>
+<%--콜랩스 자바가 문제를 알려주는 영역--%>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    1이 혼자 아무 곳에도 속하지 못 했어요. 1이가 숫자들의 모임에 속할 수 있게, 숫자들의 모임을 넣어주세요.
+  </div>
+</div>
+
 <%--    버튼목록 --%>
 <div class="buttonContainer">
   <div class="buttons">
@@ -144,7 +154,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> Step 1부터 해볼게요. <a href="#" class="alert-link">this important alert message</a>.
+  <strong>어서오세요!</strong> 좋아요! Step 1부터 해볼까요. <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>

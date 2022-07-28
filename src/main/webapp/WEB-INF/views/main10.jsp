@@ -18,7 +18,6 @@
   <title>메인</title>
 </head>
 <body>
-<%--상단 헤더부분--%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">JAVADO</a>
@@ -37,17 +36,17 @@
       </ul>
       <form class="d-flex">
         <ul id="floor">
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="main">step1</a>
-              <a class="dropdown-item" href="main2">step2</a>
-              <a class="dropdown-item" href="main3">step3</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">link</a>
-            </div>
-          </li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="main">step1</a>
+            <a class="dropdown-item" href="main2">step2</a>
+            <a class="dropdown-item" href="main3">step3</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">link</a>
+          </div>
+        </li>
         </ul>
         <button class="btn btn-primary my-2 my-sm-0" id="login">login</button>
       </form>
@@ -66,7 +65,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    이제 1이가 숫자 모임인 int에 소속되었지만 소속을 바꿔야하게 되었어요. 1이가 문자열 소속이 될 수 있게 문자열 블록을 넣어주세요.
+    화면의 칸들의 색깔을 반복해서 채워줘야해요. 반복을 위해서 필요한 블록을 넣어보세요.
   </div>
 </div>
 
@@ -155,10 +154,10 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step 2예요. <a href="#" class="alert-link">this important alert message</a>.
+  <strong>좋아요!</strong> Step 1부터 해볼게요. <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="location.href='/main3'">Next</button>
+<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>
 
 
 <script src="script/dragStep.js"></script>
