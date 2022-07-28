@@ -23,3 +23,20 @@ ul{
     position: relative;
     top: 5px;
 }
+
+.buttonContainer{
+    position: relative;
+    top: 15%;
+
+}
+#btContainer{
+    position: relative;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+button{
+    margin: 5px;
+}

@@ -46,28 +46,76 @@
 </nav>
 <div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px;"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
 <%--    버튼목록 --%>
+<div class="container" id="btContainer">
 <div class="buttonContainer">
     <div class="buttons">
-        <button type="button" class="btn btn-outline-primary" draggable="true">Int</button>
-        <button type="button" class="btn btn-outline-secondary" draggable="true">String</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="int">int</button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="String">String</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="double">double</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="short">short</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="char">char</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="byte">byte</button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="long">long</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value="float">float</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="Boolean">Boolean</button>
         <button type="button" class="btn btn-outline-success" draggable="true" value="while">while</button>
-        <button type="button" class="btn btn-outline-danger" draggable="true">for</button>
-        <button type="button" class="btn btn-outline-warning" draggable="true">dd</button>
-        <button type="button" class="btn btn-outline-info" draggable="true">Info</button>
-        <button type="button" class="btn btn-outline-light" draggable="true">Light</button>
-        <button type="button" class="btn btn-outline-dark" draggable="true">Dark</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="for">for</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="do while">do while</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="if">if</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="else">else</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="else if">else if</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="break">break</button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="continue">continue</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="return">return</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="interface">interface</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="class">class</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value="Object">Object</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="abstract">abstract</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="Array">Array</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="ArrayList">ArrayList</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="Thread">Thread</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="try">try</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="catch">catch</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="finally">finally</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="equals">equals</button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="toString">toString</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value="split">split</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="subString">subString</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="Math">Math</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="Set">Set</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="Map">Map</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="Generics">Generics</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="+">+</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value="-">-</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="*">*</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="/">/</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="%">%</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value="++">++</button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="--">--</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value="=">=</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="+=">+=</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="-=">-=</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="&&">&&</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="||">||</button>
+        <button type="button" class="btn btn-outline-primary" draggable="true" value=">">></button>
+        <button type="button" class="btn btn-outline-secondary" draggable="true" value="<"><</button>
+        <button type="button" class="btn btn-outline-success" draggable="true" value=">=">>=</button>
+        <button type="button" class="btn btn-outline-danger" draggable="true" value="<="><=</button>
+        <button type="button" class="btn btn-outline-warning" draggable="true" value="!">!</button>
+        <button type="button" class="btn btn-outline-info" draggable="true" value="&">&</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="|">|</button>
     </div>
 
 </div>
-
+</div>
 <%-- 사용할 버튼 드래그로 넣는 곳--%>
 <%--    임시--%>
-<div class="container">
-    <div class="column" id="inButton">
-        <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1></div>
+<%--<div class="container">--%>
+<%--    <div class="column" id="inButton">--%>
+<%--        <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1></div>--%>
 
-    </div>
-</div>
+<%--    </div>--%>
+<%--</div>--%>
 <%--    임시--%>
 
 
