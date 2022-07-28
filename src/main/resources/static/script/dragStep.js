@@ -157,8 +157,6 @@ function setStep1map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
