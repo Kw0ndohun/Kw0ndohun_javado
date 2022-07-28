@@ -102,7 +102,7 @@
   <strong>좋아요!</strong> 이제 Step 2예요. <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
-<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="location.href='/main2'">Next</button>
+<button type="button" class="btn btn-primary disabled" id="nextStep" onclick="location.href='/main4'">Next</button>
 
 
 <script src="script/dragStep.js"></script>
