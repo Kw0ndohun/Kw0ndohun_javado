@@ -41,9 +41,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="main">step1</a>
-              <a class="dropdown-item" href="main2">step2</a>
-              <a class="dropdown-item" href="main3">step3</a>
+              <a class="dropdown-item" href="main?step=1">step1</a>
+              <a class="dropdown-item" href="main2?step=2">step2</a>
+              <a class="dropdown-item" href="main3?step=3">step3</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">link</a>
             </div>
@@ -56,7 +56,7 @@
 </nav>
 <%--학습 진행도 게이지--%>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:3%"></div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 7%;"></div>
 </div>
 <%--자바(캐릭터)가 있는 곳--%>
 <div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: absolute; z-index: 5; width: 140px; height: 140px; top:240px"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
@@ -66,7 +66,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    이제 1이가 숫자 모임인 int에 소속되었지만 소속을 바꿔야하게 되었어요. 1이가 문자열 소속이 될 수 있게 문자열 블록을 넣어주세요.
+    무사히 1이가 소속을 변경할 수 있었어요. 하지만 1이는 문자열에 소속되었지만 한 글자인 1이는 좀 더 자기한테 맞는 한 글자들의 모임에 소속되고 싶어해요. 한 글자의 모임인 블록을 넣어보세요.
   </div>
 </div>
 
@@ -155,7 +155,7 @@
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step 2예요. <a href="#" class="alert-link">this important alert message</a>.
+  <strong>좋아요!</strong> 이제 Step 4예요. 이번 문제도 잘 풀어보아요. <a href="#" class="alert-link">this important alert message</a>.
 </div>
 
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>
