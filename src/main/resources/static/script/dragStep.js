@@ -1,3 +1,30 @@
+//블록버튼들 세팅
+
+    $.ajax({
+       type:"get",
+       url:"v1/search/buttons",
+       contentType:"application/json",
+       success:function(res){
+            for(let n=0; n<res.length; n++){
+                let txt=`<button type="button" class='${res[n]["class_"]}' draggable="true" value='${res[n]["value"]}' data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content='${res[n]["content"]}' data-bs-trigger="hover">${res[n]["name"]}</button>`;
+                $(".buttons").append(txt);
+            }
+
+           // console.log(res);
+           // console.log(res[0]["name"]);
+           // let dd=JSON.stringify(res);
+           // console.log(JSON.stringify(res)[0]);
+           var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+           var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+               return new bootstrap.Popover(popoverTriggerEl)
+           })
+       }
+    });
+//드롭다운 step 어팬드
+for(let n=1; n<10; n++){
+    let txt=`<a class="dropdown-item" href="main${n}?step=${n}">step${n}</a>`;
+    $(".dropdown-menu").append(txt);
+}
 
 //컬러 배열
 let colors=["#81ecec","#74b9ff","#ffeaa7","#fab1a0","#ff7675","#55efc4","#636e72","#a29bfe"];

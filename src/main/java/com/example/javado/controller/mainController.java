@@ -64,4 +64,54 @@ public class mainController {
 
         return "main10";
     }
+    @RequestMapping("/main11" )
+    public String main11(){
+
+        return "main11";
+    }
+    @RequestMapping("/main12" )
+    public String main12(){
+
+        return "main12";
+    }
+    @RequestMapping("/main13" )
+    public String main13(){
+
+        return "main13";
+    }
+    @RequestMapping("/main14" )
+    public String main14(){
+
+        return "main14";
+    }
+    @RequestMapping("/main15" )
+    public String main15(){
+
+        return "main15";
+    }
+    @RequestMapping("/main16" )
+    public String main16(){
+
+        return "main16";
+    }
+    @RequestMapping("/main17" )
+    public String main17(){
+
+        return "main17";
+    }
+    @RequestMapping("/main18" )
+    public String main18(){
+
+        return "main18";
+    }
+    @RequestMapping("/main19" )
+    public String main19(){
+
+        return "main19";
+    }
+    @RequestMapping("/main20" )
+    public String main20(){
+
+        return "main20";
+    }
 }

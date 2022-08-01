@@ -7,6 +7,8 @@ import com.example.javado.service.ButtonsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 public class buttonController {
 
@@ -14,8 +16,8 @@ public class buttonController {
     private ButtonsService buttonsService;
 
     @GetMapping("/v1/search/buttons")
-    public ButtonsVO getButtons() {
-        ButtonsVO buttons=buttonsService.readButtons();
+    public ArrayList<ButtonsVO> getButtons() {
+        ArrayList<ButtonsVO> buttons=buttonsService.readButtons();
         return buttons;
     }
 }

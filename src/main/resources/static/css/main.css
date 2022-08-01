@@ -31,13 +31,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+    margin-top: 30px;
 }
 
 .screenContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width:412px;
+    width:413px;
     height: 412px;
     background-color: white;
     border: solid 1px #81ecec;
@@ -60,10 +62,19 @@
     color:white;
 }
 
+.bg-dark{
+    height: 80px;
+}
+.footerText{
+    position: relative;
+    left: 30%;
+}
+
 .alert{
     bottom: 0%;
     width: 100vw;
     position: fixed;
+    z-index: 5;
 }
 
 .progress{
@@ -112,7 +123,8 @@ ul{
 }
 
 button{
-    margin-top: 5px;
+    /*margin-top: 5px;*/
+    margin: 5px;
 }
 
 #clickBatge:after{
