@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserVO, String> {
-    //jap: java <> Database 간의 자동 번역기 역할을 수행
+    //jpa: java <> Database 간의 자동 번역기 역할을 수행
 
 }

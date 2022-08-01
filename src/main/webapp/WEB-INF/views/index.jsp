@@ -49,8 +49,7 @@
 <div class="container" id="btContainer">
 <div class="buttonContainer">
     <div class="buttons">
-        <button type="button" class="btn btn-outline-primary" draggable="true" value="int" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="숫자 모임" data-bs-trigger="hover">intㄴㅇㄴㅇ</button>
-        <button type="button" class="btn btn-outline-primary" draggable="true" value="int" >intㄴㅇㄴ11ㅇ</button>
+        <button type="button" class="btn btn-outline-dark" draggable="true" value="|" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="|| 보다 빡빡하게 검사하는 곳" data-bs-trigger="hover">|</button>
 
         <button type="button" class="btn btn-outline-primary" draggable="true" value="int" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">int</button>
         <button type="button" class="btn btn-outline-secondary" draggable="true" value="String" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2" aria-controls="offcanvasScrolling">String</button>
