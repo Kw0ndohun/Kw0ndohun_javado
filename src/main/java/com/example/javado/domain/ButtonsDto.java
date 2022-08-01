@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class UserRequestDto {
-    private String id,pw,name;
+public class ButtonsDto {
+    private String class_,value,content,name;
 }
