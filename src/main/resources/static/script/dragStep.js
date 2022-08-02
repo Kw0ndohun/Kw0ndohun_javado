@@ -1,3 +1,7 @@
+//인터벌 변수
+let step1go;
+let step29go;
+
 //블록버튼들 세팅
 
     $.ajax({
@@ -83,7 +87,7 @@ let ranCol=Math.floor(Math.random() * 7+1);
 //문자 배열
 let strings=["aa","bb","cc","dd","ee","ff","gg","hh","ii","jj","kk","ll","nn","mm","oo","pp","qq","rr","ss","tt","uu","vv","ww","xx","yy","zz","AA","BB","CC","DD"];
 //정답을 맞추면 나오는 alert 대사 배열
-let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!","오우 엄청나게 커졌네요!","이제 좀 적당하군요.","좀 크지만 그래도 잘했어요! 기존의 x와는 다르게 *가 곱하기를 뜻해요.","좋아요! 나누기도 곱하기처럼 우리가 쓰는 나누기랑 다르게 /예요.","while은 () 안에 들어온 조건이 진실이면 반복해줘요. while에게는 진실만 말해야해요!","잘했어요! 소속 이름 = 값 이렇게 소속과 이름 값을 정해줄 수 있어요. 이제 1이의 이름은 하나이고 6.8의 값을 가지고 있어요.","맞아요! 부등호를 넣어서 값을 변경할 수 있어요. 소속은 처음에만 붙여주고 그 이후에는 붙이지 않아요.","사실 소속을 바꿀 수 없어요. 이미 소속과 이름, 값이 정해진 친구는 소속을 더 이상 변경할 수 없어요.","좋아요! 하나라는 이름을 버리고 하나2가 되어 int에 다시 소속되게 되었어요!","맞아요! 하나2는 10을 값으로 가지고 있죠! 오른쪽에 있는 수가 더 크면 <를 사용해요. 오른쪽이 더 크기 때문에 true가 나왔네요.","정확해요! <=는 오른쪽이 더 큰지와 같은 지도 확인해줘요.","맞아요! 이것도 마찬가지로 >=로도 같은 결과가 나와요.","거짓이 나왔어요! 15는 하나2가 가진 값 10보다 무거워요.","이것도 거짓이네요.. ==는 두 값이 서로 같은 지 확인해줘요.","진실이 나왔어요! ==가 제대로 알려주고 있네요.","맞아요! &&는 그리고를 뜻해서 양쪽에 있는 조건들이 전부 진실이여야 진실이라고 말해줘요.","맞아요! ||는 또는을 뜻해요. 한쪽에 있는 조건이 거짓이더라도 다른 한쪽이 진실이라면 진실이라고 말해줘요.","또는이랑 같은 결과가 나왔어요! | 는 또는 이랑 비슷하지만 무조건 모든 조건을 다 검사하는 친구예요.","&&과 같은 기능을 가지고 있지만 무조건 모든 조건을 검사해요."];
+let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!","오우 엄청나게 커졌네요!","이제 좀 적당하군요.","좀 크지만 그래도 잘했어요! 기존의 x와는 다르게 *가 곱하기를 뜻해요.","좋아요! 나누기도 곱하기처럼 우리가 쓰는 나누기랑 다르게 /예요.","while은 () 안에 들어온 조건이 진실이면 반복해줘요. while에게는 진실만 말해야해요!","잘했어요! 소속 이름 = 값 이렇게 소속과 이름 값을 정해줄 수 있어요. 이제 1이의 이름은 하나이고 6.8의 값을 가지고 있어요.","맞아요! 부등호를 넣어서 값을 변경할 수 있어요. 소속은 처음에만 붙여주고 그 이후에는 붙이지 않아요.","사실 소속을 바꿀 수 없어요. 이미 소속과 이름, 값이 정해진 친구는 소속을 더 이상 변경할 수 없어요.","좋아요! 하나라는 이름을 버리고 하나2가 되어 int에 다시 소속되게 되었어요!","맞아요! 하나2는 10을 값으로 가지고 있죠! 오른쪽에 있는 수가 더 크면 <를 사용해요. 오른쪽이 더 크기 때문에 true가 나왔네요.","정확해요! <=는 오른쪽이 더 큰지와 같은 지도 확인해줘요.","맞아요! 이것도 마찬가지로 >=로도 같은 결과가 나와요.","거짓이 나왔어요! 15는 하나2가 가진 값 10보다 무거워요.","이것도 거짓이네요.. ==는 두 값이 서로 같은 지 확인해줘요.","진실이 나왔어요! ==가 제대로 알려주고 있네요.","맞아요! &&는 그리고를 뜻해서 양쪽에 있는 조건들이 전부 진실이여야 진실이라고 말해줘요.","맞아요! ||는 또는을 뜻해요. 한쪽에 있는 조건이 거짓이더라도 다른 한쪽이 진실이라면 진실이라고 말해줘요.","또는이랑 같은 결과가 나왔어요! | 는 또는 이랑 비슷하지만 무조건 모든 조건을 다 검사하는 친구예요.","&&과 같은 기능을 가지고 있지만 무조건 모든 조건을 검사해요.","아무 일도 일어나지 않았네요? 역시 15의 말은 거짓이였나봐요.","거짓말 탐지기가 실행이 되었어요! 하나2의 값이 20이 되고 친구들이 가득 찾아네요!","두번째 탐지기의 조건이 충족되었나보네요! else if는 무조건 if랑 같이 있어야 해요.","맞아요! else는 if와 else if가 탐지에 실패하면 나오는 애예요. else if와 마찬가지로 if와 무조건 함께 하는 친구예요.","좋아요! for은 정해진 조건에 따라 값이 바뀌며 반복해줘요.","잘했어요! 반복이 멈췄어요. break은 반복을 곧장 멈춰버려요."];
 
 
 //     $.ajax({
@@ -101,16 +105,16 @@ if(getParameterByName("step")===""){
     step=1;
 }
 //단계를 통과했는지 최종 체크
-//                      /5       /10       /15       /20       /25
-let stepClears=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+//                      /5       /10       /15       /20       /25       /30       /35
+let stepClears=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 // 각 단계별 정답 갯수 배열을 만들어 answer배열의 정답을 체크
-let stepAnswerCnt=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+let stepAnswerCnt=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 //정답이 들은 배열                           /5                        /10
-let answer=["int","String","char","long","double","+","-","*","/","while","=","=","int","int","<","<=",">","<","==","==","&&","||","|","&"];
+let answer=["int","String","char","long","double","+","-","*","/","while","=","=","int","int","<","<=",">","<","==","==","&&","||","|","&","if","if","else if","else","for","break"];
 //정답을 입력이 입력되면 1로 바뀌어 정답을 맞췄음을 확인하는 배열
 //                      /5       /10       /15        /20       /25
-let answerCheck=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let answerCheck=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 //정답 체크 맥스범위 변수 //sql에 저장? 세션에 저장?/ 현재 단계 전까지의 stepAnswerCnt배열의 값들을 더하면 됨.
 let answerCountCnt=0;
@@ -270,6 +274,36 @@ function setScreen(){
     }
     else if(step===25){
         setStep25map();
+    }
+    else if(step===26){
+        setStep26map();
+    }
+    else if(step===27){
+        setStep27map();
+    }
+    else if(step===28){
+        setStep28map();
+    }
+    else if(step===29){
+        setStep29map();
+    }
+    else if(step===30){
+        setStep30map();
+    }
+    else if(step===31){
+        setStep31map();
+    }
+    else if(step===32){
+        setStep32map();
+    }
+    else if(step===33){
+        setStep33map();
+    }
+    else if(step===34){
+        setStep34map();
+    }
+    else if(step===35){
+        setStep35map();
     }
 }
 //step2일 때 실행화면 세팅
@@ -601,6 +635,91 @@ function setStep24map(){
     $(`#b${12}`).html(`9`);
     $(`#b${14}`).html(`15`);
 }
+//step25일 때 실행되는 화면 세팅
+function setStep25map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+}
+//step26일 때 실행되는 화면 세팅
+function setStep26map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+}
+//step27일 때 실행되는 화면 세팅
+function setStep27map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+}
+//step28일 때 실행되는 화면 세팅
+function setStep28map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+}
+//step29일 때 실행되는 화면 세팅
+function setStep29map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+}
+//step30일 때 실행되는 화면 세팅
+function setStep30map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px`);
+    $(`#b${13}`).html(`하나2`);
+    $(`#b${8}`).html(`10`);
+    $(`#b${12}`).html(`9`);
+    $(`#b${14}`).html(`15`);
+    step1go =setInterval(step10run,400);
+}
 
 // =================== 맵세팅 영역================== //
 
@@ -651,7 +770,7 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-let step1go;
+
 // 정답을 맞추면 스크린에 실행을 해주는 펑션
 function screenRun(){
     if(step===1){
@@ -730,6 +849,37 @@ function screenRun(){
     else if(step===25){
         step25run();
     }
+    else if(step===26){
+        step26run();
+    }
+    else if(step===27){
+        step27run();
+    }
+    else if(step===28){
+        step28run();
+    }
+    else if(step===29){
+        step29go =setInterval(step29run,400);
+    }
+    else if(step===30){
+        step30run();
+    }
+    else if(step===31){
+        step31run();
+    }
+    else if(step===32){
+        step32run();
+    }
+    else if(step===33){
+        step33run();
+    }
+    else if(step===34){
+        step34run();
+    }
+    else if(step===35){
+        step35run();
+    }
+
 }
 
 //step1 실행
@@ -875,7 +1025,68 @@ function step24run(){
     $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px;`);
     $(`#b${13}`).html("거짓");
 }
+//step25 실행
+function step25run(){
 
+}
+//step26 실행
+function step26run(){
+    for(let n=1; n<13; n++){
+        if(n!=8&&n!=12){
+            $(`#b${n}`).html(`${n}`);
+        }
+    }
+    for(let i=15; i<26; i++){
+            $(`#b${i}`).html(`${i}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px;`);
+    $(`#b${13}`).html("20");
+}
+//step27 실행
+function step27run(){
+    for(let n=1; n<13; n++){
+        if(n!=8&&n!=12){
+            $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+            $(`#b${i}`).html(`${strings[i]}`);
+        }
+    }
+    for(let i=15; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+        $(`#b${i}`).html(`${strings[i]}`);
+    }
+
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px;`);
+    $(`#b${13}`).html("20");
+}
+//step28 실행
+function step28run(){
+    for(let n=1; n<26; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[7]}`);
+    }
+
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}; font-size:20px;`);
+    $(`#b${13}`).html("30");
+}
+//step29 실행  for
+blockNum=1;
+re=1;
+function step29run(){
+    ranCol=Math.floor(Math.random() * 7+1);
+    $(`#b${blockNum}`).attr("style",`background-color:${colors[ranCol]}`);
+    blockNum++;
+    if(blockNum>5){
+        blockNum=1;
+    }
+    if(re===5){
+        clearInterval(step29go);
+    }
+
+    re++;
+}
+//step30 실행
+function step30run(){
+    clearInterval(step1go);
+}
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)

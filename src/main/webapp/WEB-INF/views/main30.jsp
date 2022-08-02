@@ -44,7 +44,7 @@
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv4" id="m21Question4">10 > 15</div>
+<%--        <div class="questionDiv4" id="m21Question4">5</div>--%>
 <%--        <div class="questionDiv2" id="m21Question2">9 < 하나2</div>--%>
       </div>
     </div>
@@ -62,7 +62,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    이러한 조건들의 진실 거짓을 검사하는 블록이 있어요. 15가 똑바로 말하는지 검사해봐요. 진실이면 탐지기가 가진 것을 실행해줘요.
+    반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.
   </div>
 </div>
 
