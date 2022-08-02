@@ -64,6 +64,7 @@
     font-size: 40px;
     color:white;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .bg-dark{
@@ -140,6 +141,39 @@ ul{
     position: relative;
     margin: -5px 5px 5px 5px;
 }
+.questionDiv4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffeaa7;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    position: relative;
+    margin: -5px 5px 5px 5px;
+}
+
+#m14Question2{
+    width:50px;
+
+}
+#m14Question3{
+    width:20px;
+}
+#m14Question4{
+    width:30px;
+}
+#m21Question4{
+    width:70px;
+}
+#m21Question2{
+    width:100px;
+}
+
+
+
+/*문제 칸 크기*/
+
 #inButtonBox{
     display: flex;
     align-items: center;
@@ -171,6 +205,9 @@ button{
 .java{
     position: relative;
     top: -20%;
+}
+h1{
+    margin-top: 5px;
 }
 
 /*.collapse{
@@ -242,5 +279,8 @@ button{
     width: 45px;
 }
 #step13answerDiv{
+    width: 60px;
+}
+#step14answerDiv{
     width: 60px;
 }

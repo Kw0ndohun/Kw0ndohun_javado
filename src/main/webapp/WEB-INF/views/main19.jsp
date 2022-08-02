@@ -43,10 +43,9 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
+        <div class="questionDiv4" id="m14Question4">15</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv2" id="m14Question2">하나</div>
-        <div class="questionDiv3" id="m14Question3">=</div>
-        <div class="questionDiv4" id="m14Question4">10</div>
+        <div class="questionDiv2" id="m14Question2">하나2</div>
       </div>
     </div>
 
@@ -63,7 +62,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    이제 하나의 소속을 가장 처음 소속했던 곳으로 되돌려봐요.
+    15는 조금 멋쩍어 하네요. 하지만 아직 포기하지 않은 듯 해요. 이번엔 더 가볍진 않지만 같은 무게라고 하네요. 서로 같다를 의미하는 블록을 넣어봐요.
   </div>
 </div>
 

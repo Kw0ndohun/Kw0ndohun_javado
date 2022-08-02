@@ -1,0 +1,59 @@
+use demo;
+create table buttons(
+	class varchar(30),
+    value varchar(30),
+	content varchar(500),
+    name varchar(30)
+);
+SELECT * FROM demo.buttons;
+insert into buttons values("btn btn-outline-secondary","String","문자열 모임","String");
+insert into buttons values("btn btn-outline-warning","double","실수 모임","double");
+insert into buttons values("btn btn-outline-info","short","작은 숫자 모임","shorh");
+insert into buttons values("btn btn-outline-dark","char","한 글자 모임","char");
+insert into buttons values("btn btn-outline-primary","byte","아주 작은 숫자 모임","byte");
+insert into buttons values("btn btn-outline-secondary","long","아주 큰 숫자 모임","long");
+insert into buttons values("btn btn-outline-success","float","f가 붙는 실수 모임","float");
+insert into buttons values("btn btn-outline-danger","Boolean","진실 혹은 거짓","Boolean");
+insert into buttons values("btn btn-outline-success","while","반복","while");
+insert into buttons values("btn btn-outline-danger","for","조건에 따른 반복","for");
+insert into buttons values("btn btn-outline-warning","do while","한번은 하는 반복","do while");
+insert into buttons values("btn btn-outline-info","if","거짓말 탐지기","if");
+insert into buttons values("btn btn-outline-danger","else","거짓말 탐지기들이 다 거짓이면 실행","else");
+insert into buttons values("btn btn-outline-warning","else if","다음 거짓말 탐지기","else if");
+insert into buttons values("btn btn-outline-primary","break","나가기","break");
+insert into buttons values("btn btn-outline-secondary","continue","다시하기","continue");
+insert into buttons values("btn btn-outline-info","return","값 주기","return");
+insert into buttons values("btn btn-outline-dark","interface","설계도 가이드 라인","interface");
+insert into buttons values("btn btn-outline-dark","class","설계도","class");
+insert into buttons values("btn btn-outline-success","Object","모든 모임의 아빠","Object");
+insert into buttons values("btn btn-outline-danger","abstract","누가 네임팬으로 써둔 설계도","abstract");
+insert into buttons values("btn btn-outline-warning","Array","모임에 가입한 친구들을 모와두는 곳","Array");
+insert into buttons values("btn btn-outline-info","Thread","실행되는 곳","Thread");
+insert into buttons values("btn btn-outline-danger","catch","오류 탐지기가 탐지하면 일하는 곳","catch");
+insert into buttons values("btn btn-outline-warning","finally","오류 탐지가 끝나면 일하는 곳","finally");
+insert into buttons values("btn btn-outline-primary","equals","친구들이 같은지 확인","equals");
+insert into buttons values("btn btn-outline-secondary","toString","친구의 자기소개서","toString");
+insert into buttons values("btn btn-outline-success","split","기준 정해서 분리시키기","split");
+insert into buttons values("btn btn-outline-warning","Math","수학 선생","Math");
+insert into buttons values("btn btn-outline-info","Set","중복과 순서없이 친구들을 모와둔 곳","Set");
+insert into buttons values("btn btn-outline-dark","Map","방문을 걸어둔 친구들을 모와둔 곳","Map");
+insert into buttons values("btn btn-outline-info","Generics","무엇이든 될 수 있는 친구","Generics");
+insert into buttons values("btn btn-outline-primary","+","더하기","+");
+insert into buttons values("btn btn-outline-success","-","빼기","-");
+insert into buttons values("btn btn-outline-danger","*","곱하기","*");
+insert into buttons values("btn btn-outline-danger","/","나누기","/");
+insert into buttons values("btn btn-outline-warning","%","나머지","%");
+insert into buttons values("btn btn-outline-primary","++","친구에게 1더하기","++");
+insert into buttons values("btn btn-outline-secondary","--","친구에게 1빼기","--");
+insert into buttons values("btn btn-outline-success","=","왼쪽은 오른쪽이 된다","=");
+insert into buttons values("btn btn-outline-danger","+=","1더하기","+=");
+insert into buttons values("btn btn-outline-warning","-=","1빼기","-=");
+insert into buttons values("btn btn-outline-dark","&&","그리고","&&");
+insert into buttons values("btn btn-outline-info","||","또는","||");
+insert into buttons values("btn btn-outline-primary",">","왼쪽이 크다",">");
+insert into buttons values("btn btn-outline-secondary","<","오른쪽이 크다","<");
+insert into buttons values("btn btn-outline-success",">=","왼쪽이 크거나 같다",">=");
+insert into buttons values("btn btn-outline-danger","<=","오른쪽이 크거나 같다","<=");
+insert into buttons values("btn btn-outline-warning","!","반대로","!");
+insert into buttons values("btn btn-outline-info","&","&&보다 빡빡하게 검사하는 곳","&");
+insert into buttons values("btn btn-outline-dark","|","||보다 빡빡하게 검사하는 곳","|");
