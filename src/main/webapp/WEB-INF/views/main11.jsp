@@ -19,7 +19,6 @@
 </head>
 <body>
 <% int step=Integer.parseInt(request.getParameter("step"));%>
-<%--상단 헤더부분--%>
 <%--헤더위치--%>
 <div id="header">
 
@@ -44,14 +43,15 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
+      <div class="questionDiv2">double 하나</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
+      <div class="questionDiv3">6.8</div>
       </div>
     </div>
 
   </div>
 </div>
 <%--    임시--%>
-
 
 
 <%--자바(캐릭터)가 있는 곳--%>
@@ -62,16 +62,17 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    이제 1이가 숫자 모임인 int에 소속되었지만 소속을 바꿔야하게 되었어요. 1이가 문자열 소속이 될 수 있게 문자열 블록을 넣어주세요.
+    1이는 소속과 값을 가지고 있지만 이름이 없어요. 1이도 이름을 가질 때가 되었어요. 1이가 이름을 가질 수 있게 부등호를 넣어보세요.
   </div>
 </div>
 
-<%--실행박스--%>
+<%--실행화면--%>
 <div class="container" id="conScreen">
   <div class="screenContainer" >
 
   </div>
 </div>
+
 
 
 

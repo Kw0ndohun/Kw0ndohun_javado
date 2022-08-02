@@ -31,7 +31,7 @@ ul{
 }
 #btContainer{
     position: relative;
-    top: 20%;
+    top: 15%;
     display: flex;
     justify-content: center;
     width: 600px;

@@ -20,8 +20,58 @@
            })
        }
     });
+
+//헤더 어팬드
+let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">JAVADO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Learning
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Training</a>
+      </ul>
+      <form class="d-flex">
+        <ul id="floor">
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Step</a>
+          <div class="dropdown-menu">
+
+          </div>
+        </li>
+        </ul>
+        <button class="btn btn-primary my-2 my-sm-0" id="login">login</button>
+      </form>
+    </div>
+  </div>
+</nav>`;
+$("#header").append(header);
+//footer 어팬드
+let footer=`<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-bottom" id="footerIndex">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="color: cadetblue;">JAVADO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <br>
+            <span class="footerText">JAVADO |만든 이: 권도훈 |e-mail: ehgns0125@naver.com</span>
+        </div>
+    </div>
+</nav>`;
+$("#footer").append(footer);
 //드롭다운 step 어팬드
-for(let n=1; n<10; n++){
+let dropdown=`<a class="dropdown-item" href="main?step=1">step1</a>`;
+$(".dropdown-menu").append(dropdown);
+for(let n=2; n<20; n++){
     let txt=`<a class="dropdown-item" href="main${n}?step=${n}">step${n}</a>`;
     $(".dropdown-menu").append(txt);
 }
@@ -33,7 +83,7 @@ let ranCol=Math.floor(Math.random() * 7+1);
 //문자 배열
 let strings=["aa","bb","cc","dd","ee","ff","gg","hh","ii","jj","kk","ll","nn","mm","oo","pp","qq","rr","ss","tt","uu","vv","ww","xx","yy","zz","AA","BB","CC","DD"];
 //정답을 맞추면 나오는 alert 대사 배열
-let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!","오우 엄청나게 커졌네요!","이제 좀 적당하군요.","좀 크지만 그래도 잘했어요! 기존의 x와는 다르게 *가 곱하기를 뜻해요."];
+let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었어요!","1이가 무사히 문자열 소속으로 소속을 옮겼습니다!","한 글자인 1이는 이제 한 글자들끼리 모인 char에 소속되게 되었어요!","이제 1이는 20억을 넘어 더 성잘할 수 있게 되었습니다!","1이의 키가 드러났네요!","오우 엄청나게 커졌네요!","이제 좀 적당하군요.","좀 크지만 그래도 잘했어요! 기존의 x와는 다르게 *가 곱하기를 뜻해요.","좋아요! 나누기도 곱하기처럼 우리가 쓰는 나누기랑 다르게 /예요.","while은 () 안에 들어온 조건이 진실이면 반복해줘요. while에게는 진실만 말해야해요!","잘했어요! 소속 이름 = 값 이렇게 소속과 이름 값을 정해줄 수 있어요. 이제 1이의 이름은 하나이고 6.8의 값을 가지고 있어요.","맞아요! 부등호를 넣어서 값을 변경할 수 있어요. 소속은 처음에만 붙여주고 그 이후에는 붙이지 않아요.","이미 부등호를 통해서 이미 정해진 소속은 이름을 바꿔야 소속을 바꿀 수 있어요. 하나는 하나1이 되어 다시 int에 소속되었어요! "];
 
 
 //     $.ajax({
@@ -51,14 +101,15 @@ if(getParameterByName("step")===""){
     step=1;
 }
 //단계를 통과했는지 최종 체크
-let stepClears=[0,0,0,0,0,0,0,0,0];
+//                      /5       /10       /15
+let stepClears=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 // 각 단계별 정답 갯수 배열을 만들어 answer배열의 정답을 체크
-let stepAnswerCnt=[1,1,1,1,1,1,1,1,1];
+let stepAnswerCnt=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 //정답이 들은 배열
-let answer=["int","String","char","long","double","+","-","*","while"];
+let answer=["int","String","char","long","double","+","-","*","/","while","=","=","int"];
 //정답을 입력이 입력되면 1로 바뀌어 정답을 맞췄음을 확인하는 배열
-let answerCheck=[0,0,0,0,0,0,0,0,0];
+let answerCheck=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 //정답 체크 맥스범위 변수 //sql에 저장? 세션에 저장?/ 현재 단계 전까지의 stepAnswerCnt배열의 값들을 더하면 됨.
 let answerCountCnt=0;
@@ -174,6 +225,21 @@ function setScreen(){
     else if(step===10){
         setStep10map();
     }
+    else if(step===11){
+        setStep11map();
+    }
+    else if(step===12){
+        setStep12map();
+    }
+    else if(step===13){
+        setStep13map();
+    }
+    else if(step===14){
+        setStep14map();
+    }
+    else if(step===15){
+        setStep15map();
+    }
 }
 //step2일 때 실행화면 세팅
 function setStep1map(){
@@ -199,8 +265,7 @@ function setStep2map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
+
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -216,8 +281,6 @@ function setStep3map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -233,8 +296,7 @@ function setStep4map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
+
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -250,8 +312,6 @@ function setStep5map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -267,8 +327,6 @@ function setStep6map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -284,8 +342,7 @@ function setStep7map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
+
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -302,8 +359,6 @@ function setStep8map(){
         inNum++;
     }
     for(let i=14; i<26; i++){
-        console.log(1);
-        console.log($(`#b${i}`));
         $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
         $(`#b${i}`).html(`${strings[i]}`);
     }
@@ -311,6 +366,68 @@ function setStep8map(){
     $(`#b${8}`).html('');
     $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
     $(`#b${13}`).html(`${5.1}`);
+}
+//step9일 때 실행되는 화면 세팅
+function setStep9map(){
+    let inNum=2;
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+        $(`#b${n}`).html(`${inNum}`);
+        inNum++;
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[1]}`);
+        $(`#b${i}`).html(`${strings[i]}`);
+    }
+    $(`#b${12}`).html('');
+    $(`#b${3}`).html('');
+    $(`#b${8}`).html('');
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${20.4}`);
+}
+//step10일 때 실행되는 화면 세팅
+function setStep10map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${6.8}`);
+}
+//step11일 때 실행되는 화면 세팅
+function setStep11map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`${6.8}`);
+}
+//step12일 때 실행되는 화면 세팅
+function setStep12map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`하나`);
+}
+//step13일 때 실행되는 화면 세팅
+function setStep13map(){
+    for(let n=1; n<13; n++){
+        $(`#b${n}`).attr("style",`background-color:${colors[0]}`);
+    }
+    for(let i=14; i<26; i++){
+        $(`#b${i}`).attr("style",`background-color:${colors[0]}`);
+    }
+    $(`#b${13}`).attr("style",`background-color:${colors[6]}`);
+    $(`#b${13}`).html(`하나`);
 }
 
 // =================== 맵세팅 영역================== //
@@ -396,6 +513,27 @@ function screenRun(){
     else if(step===10){
         step1go =setInterval(step10run,400);
     }
+    else if(step===11){
+        step11run();
+    }
+    else if(step===12){
+        step12run();
+    }
+    else if(step===13){
+        step13run();
+    }
+    else if(step===14){
+        step14run();
+    }
+    else if(step===15){
+        step15run();
+    }
+    else if(step===16){
+        step16run();
+    }
+    else if(step===17){
+        step17run();
+    }
 }
 
 //step1 실행
@@ -435,6 +573,11 @@ function step8run(){
     $(`#b${3}`).html('');
     $(`#b${13}`).html("20.4");
 }
+//step9 실행
+function step9run(){
+    $(`#b${2}`).html('');
+    $(`#b${13}`).html("6.8");
+}
 //step10 실행  while
 let blockNum=1;
 let re=1;
@@ -450,6 +593,18 @@ function step10run(){
     }
 
     re++;
+}
+//step11 실행
+function step11run(){
+    $(`#b${13}`).html("하나");
+}
+//step12 실행
+function step12run(){
+    $(`#b${13}`).html("10");
+}
+//step13 실행
+function step13run(){
+    $(`#b${13}`).attr("style",`background-color:${colors[0]}`);
 }
 
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))

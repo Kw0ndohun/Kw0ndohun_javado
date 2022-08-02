@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="main">Training</a>
+                    <a class="nav-link" href="main?step=1">Training</a>
                 </li>
 
             </ul>
@@ -515,6 +515,7 @@
         <p>물처럼 어떤 자료 형태로도 변할 수 있게 해줘요.
             <br><a href="https://docs.oracle.com/javase/tutorial/java/generics/index.html">상세보기</a></p>
     </div>
+    <div style="position: absolute; z-index: 5; width: 300px; height: 300px;" class="bear"><img src="img/bear640.png" class="img-fluid" alt="..."></div>
 </div>
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling37" aria-labelledby="offcanvasScrollingLabel37">
     <div class="offcanvas-header">
