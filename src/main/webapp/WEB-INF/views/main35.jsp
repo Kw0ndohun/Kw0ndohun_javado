@@ -36,9 +36,9 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
+        <div class="questionDiv2" id="m35Question2"> if ( 30 < 하나2){}</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-<%--        <div class="questionDiv4" id="m21Question4">5</div>--%>
-<%--        <div class="questionDiv2" id="m21Question2">9 < 하나2</div>--%>
+        <div class="questionDiv4" id="m33Question4"> {} </div>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.
+    if와 else if, else는 {} 안에 실행할 기능을 담아요. 15의 무게를 반으로 줄여주는 기능을 가진 {}가 있어요. if가 실행되지 않았을 때 {}가 실행되게 해보세요.
   </div>
 </div>
 <%--실행화면--%>

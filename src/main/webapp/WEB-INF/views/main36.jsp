@@ -37,8 +37,9 @@
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-<%--        <div class="questionDiv4" id="m21Question4">5</div>--%>
-<%--        <div class="questionDiv2" id="m21Question2">9 < 하나2</div>--%>
+        <div class="questionDiv2" id="m36Question2"> ( 30 < 31){}</div>
+        <div class="answerDiv2" id="step<%=step%>answerDiv2"></div>
+        <div class="questionDiv4" id="m36Question4">( 32 > 30){}  </div>
       </div>
     </div>
   </div>
@@ -52,7 +53,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.
+      15를 150으로 돌리는 기능을 가진 {}와 15로 돌리는 기능을 가진 {}가 있어요. 앞에 있는 것을 먼저 검사하고 뒤에를 검사할 수 있게 블록을 넣어보세요.
   </div>
 </div>
 <%--실행화면--%>

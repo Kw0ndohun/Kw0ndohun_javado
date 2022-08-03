@@ -118,6 +118,15 @@ ul{
     position: relative;
     margin: -5px 5px 5px 5px;
 }
+.answerDiv2{
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    position: relative;
+    margin: -5px 5px 5px 5px;
+}
 
 .questionDiv2{
     display: flex;
@@ -167,6 +176,21 @@ ul{
     width:70px;
 }
 #m21Question2{
+    width:100px;
+}
+#m33Question4{
+    width:50px;
+}
+#m33Question2{
+    width:50px;
+}
+#m35Question2{
+    width:100px;
+}
+#m36Question4{
+    width:100px;
+}
+#m36Question2{
     width:100px;
 }
 

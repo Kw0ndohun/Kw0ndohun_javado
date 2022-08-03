@@ -37,7 +37,7 @@
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-<%--        <div class="questionDiv4" id="m21Question4">5</div>--%>
+        <div class="questionDiv4" id="m21Question4">5</div>
 <%--        <div class="questionDiv2" id="m21Question2">9 < 하나2</div>--%>
       </div>
     </div>
@@ -52,7 +52,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.
+    정해진 값을 주는 블록이 있어요. break처럼 반복을 즉시 나가주기도 해요. 15를 날씬하게 만들어줄까요? 값을 주는 블록을 찾아서 넣어보세요.
   </div>
 </div>
 <%--실행화면--%>

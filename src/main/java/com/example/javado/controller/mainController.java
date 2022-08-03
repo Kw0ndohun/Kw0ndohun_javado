@@ -185,4 +185,35 @@ public class mainController {
         return "main34";
     }
 
+    @RequestMapping("/main35" )
+    public String main35(){
+
+        return "main35";
+    }
+    @RequestMapping("/main36" )
+    public String main36(){
+
+        return "main36";
+    }
+    @RequestMapping("/main37" )
+    public String main37(){
+
+        return "main37";
+    }
+    @RequestMapping("/main38" )
+    public String main38(){
+
+        return "main38";
+    }
+    @RequestMapping("/main39" )
+    public String main39(){
+
+        return "main39";
+    }
+
+    @RequestMapping("/main40" )
+    public String main40(){
+
+        return "main40";
+    }
 }

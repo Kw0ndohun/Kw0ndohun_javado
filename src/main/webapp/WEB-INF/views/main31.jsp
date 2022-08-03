@@ -52,7 +52,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.
+    반복하다가 처음으로 돌아갈 수 있어요. 다시하기 블록을 넣어보세요.
   </div>
 </div>
 <%--실행화면--%>
