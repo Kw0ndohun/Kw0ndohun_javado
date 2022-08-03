@@ -20,10 +20,6 @@ public class ButtonsService {
 
     //Read
         public ArrayList<ButtonsVO> readButtons(){
-//            ButtonsVO result = buttonsRepository.findById("int").orElseThrow(
-//                    () -> new IllegalArgumentException("존재하지 않는 이름입니다.")
-//
-//            );
             List<ButtonsVO> result = buttonsRepository.findAll();
             ArrayList<ButtonsVO> buttonsList =new ArrayList<ButtonsVO>();
             buttonsList.addAll(result);

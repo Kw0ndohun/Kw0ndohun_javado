@@ -22,22 +22,17 @@
 <%--상단 헤더부분--%>
 <%--헤더위치--%>
 <div id="header">
-
 </div>
 <%--학습 진행도 게이지--%>
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:<%=(step-1)*2%>%"></div>
 </div>
-
-
 <%--    버튼목록 --%>
 <div class="buttonContainer">
   <div class="buttons">
 
   </div>
-
 </div>
-
 <%-- 사용할 버튼 드래그로 넣는 곳--%>
 <%--    임시--%>
 <div class="container" id="answerCon">
@@ -47,13 +42,9 @@
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
       </div>
     </div>
-
   </div>
 </div>
 <%--    임시--%>
-
-
-
 <%--자바(캐릭터)가 있는 곳--%>
 <div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 140px; height: 140px; top:-20%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
     ↙ Click !!!
@@ -65,33 +56,21 @@
     이제 1이가 숫자 모임인 int에 소속되었지만 소속을 바꿔야하게 되었어요. 1이가 문자열 소속이 될 수 있게 문자열 블록을 넣어주세요.
   </div>
 </div>
-
 <%--실행박스--%>
 <div class="container" id="conScreen">
   <div class="screenContainer" >
-
   </div>
 </div>
-
-
-
-
 <%--어랏트--%>
 <div class="alert alert-dismissible alert-primary">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   <strong>좋아요!</strong> 이제 Step<%=step%>예요. 이번 문제도 잘 풀어보아요.
 </div>
-
 <%--푸터--%>
 <div id="footer">
-
 </div>
 <%--푸터--%>
-
 <button type="button" class="btn btn-primary disabled" id="nextStep" onclick="nextClick()">Next</button>
-
-
 <script src="script/dragStep.js"></script>
-
 </body>
 </html>

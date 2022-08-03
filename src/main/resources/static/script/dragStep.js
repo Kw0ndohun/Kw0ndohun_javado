@@ -3,7 +3,6 @@ let step1go;
 let step29go;
 
 //블록버튼들 세팅
-
     $.ajax({
        type:"get",
        url:"v1/search/buttons",
@@ -13,11 +12,6 @@ let step29go;
                 let txt=`<button type="button" class='${res[n]["class_"]}' draggable="true" value='${res[n]["value"]}' data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content='${res[n]["content"]}' data-bs-trigger="hover">${res[n]["name"]}</button>`;
                 $(".buttons").append(txt);
             }
-
-           // console.log(res);
-           // console.log(res[0]["name"]);
-           // let dd=JSON.stringify(res);
-           // console.log(JSON.stringify(res)[0]);
            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                return new bootstrap.Popover(popoverTriggerEl)
