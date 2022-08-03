@@ -26,6 +26,7 @@
     height: 20vh;
     border-radius: 10px;
     margin-top: 20px;
+    font-size: 20px;
 }
 
 #conScreen{
@@ -163,7 +164,7 @@ ul{
 }
 
 #m14Question2{
-    width:50px;
+    width:60px;
 
 }
 #m14Question3{
@@ -179,13 +180,16 @@ ul{
     width:100px;
 }
 #m33Question4{
-    width:50px;
+    width:60px;
 }
 #m33Question2{
     width:50px;
 }
+#m34Question2{
+    width:140px;
+}
 #m35Question2{
-    width:100px;
+    width:150px;
 }
 #m36Question4{
     width:100px;
@@ -193,7 +197,48 @@ ul{
 #m36Question2{
     width:100px;
 }
-
+#m37Question4{
+    width:135px;
+}
+#m37Question2{
+    width:125px;
+}
+#m11Question2{
+    width:120px;
+}
+#m21Question2{
+    width:110px;
+}
+#m23Question4{
+    width: 80px;
+}
+#m24Question4{
+    width: 80px;
+}
+#m25Question4{
+    width: 80px;
+}
+#m38Question2{
+    width: 55px;
+}
+#m38Question4{
+    width: 60px;
+}
+#m39Question2{
+    width: 110px;
+}
+#m40Question4{
+    width: 130px;
+}
+#m41Question2{
+    width: 165px;
+}
+#m41Question4{
+    width: 40px;
+}
+#m43Question2{
+    width: 40px;
+}
 
 
 /*문제 칸 크기*/
@@ -307,4 +352,88 @@ h1{
 }
 #step14answerDiv{
     width: 60px;
+}
+#step15answerDiv{
+    width: 45px;
+}
+#step16answerDiv{
+    width: 55px;
+}
+#step17answerDiv{
+    width: 45px;
+}
+#step18answerDiv{
+    width: 45px;
+}
+#step19answerDiv{
+    width: 55px;
+}
+#step20answerDiv{
+    width: 55px;
+}
+#step21answerDiv{
+    width: 55px;
+}
+#step22answerDiv{
+    width: 55px;
+}
+#step23answerDiv{
+    width: 45px;
+}
+#step24answerDiv{
+    width: 55px;
+}
+#step25answerDiv{
+    width: 55px;
+}
+#step26answerDiv{
+    width: 55px;
+}
+#step27answerDiv{
+    width: 90px;
+}
+#step29answerDiv{
+    width: 70px;
+}
+#step30answerDiv{
+    width: 90px;
+}
+#step31answerDiv{
+    width:110px;
+}
+#step32answerDiv{
+    width:95px;
+}
+#step33answerDiv{
+    width:50px;
+}
+#step34answerDiv{
+    width:90px;
+}
+#step35answerDiv{
+    width:90px;
+}
+#step36answerDiv{
+    width:55px;
+}
+#step36answerDiv2{
+    width:90px;
+}
+#step37answerDiv{
+    width:55px;
+}
+#step37answerDiv2{
+    width:55px;
+}
+#step38answerDiv2{
+    width:50px;
+}
+#step39answerDiv{
+    width:55px;
+}
+#step40answerDiv{
+    width:50px;
+}
+#step41answerDiv{
+    width:65px;
 }

@@ -37,9 +37,9 @@
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv2" id="m36Question2"> ( 30 < 하나2){}</div>
+        <div class="questionDiv2" id="m37Question2"> ( 30 < 하나2){}</div>
         <div class="answerDiv2" id="step<%=step%>answerDiv2"></div>
-        <div class="questionDiv4" id="m36Question4">( 30 == 하나2){}  </div>
+        <div class="questionDiv4" id="m37Question4">( 30 == 하나2){}  </div>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-      if를 따로 쓰면 두 개의 식을 따로 따로 검사할 수 있어요. 앞에 {}는 전체 칸을 바꿔주는 기능이 있고 뒤에 {}는 15를 이동시켜주는 기능을 가지고 있어요. 한번 블록을 넣어보세요.
+      if를 따로 쓰면 두 개의 식을 따로 따로 검사할 수 있어요. 한번 블록을 넣어보세요.
   </div>
 </div>
 <%--실행화면--%>

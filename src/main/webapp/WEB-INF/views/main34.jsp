@@ -38,7 +38,7 @@
       <div class="container" id="inButtonBox">
 <%--        <div class="questionDiv4" id="m33Question4">if  </div>--%>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv2" id="m33Question2"> ( 30 == 하나2)</div>
+        <div class="questionDiv2" id="m34Question2"> ( 30 == 하나2)</div>
       </div>
     </div>
   </div>

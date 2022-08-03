@@ -43,7 +43,7 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
-        <div class="questionDiv4" id="m21Question4">10 > 15</div>
+        <div class="questionDiv4" id="m23Question4">10 > 15</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
         <div class="questionDiv2" id="m21Question2">9 < 하나2</div>
       </div>
