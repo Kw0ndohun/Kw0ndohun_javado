@@ -99,10 +99,17 @@ ul{
 
 }
 
+.javaLocation{
+    position: relative;
+    top:-20%;
+}
+
 #floor{
     position: relative;
     right: 20px;
     top: 15px;
+    color: white;
+    font-size: 20px;
 }
 
 #login{
@@ -255,6 +262,8 @@ ul{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 100px;
+    height: 50px;
 }
 
 #answerCon{
@@ -291,7 +300,8 @@ h1{
 .card-body{
     width: 30vw;
     position: absolute;
-    top: 50%;
+    /*top: 50%;*/
+    margin-top: 20px;
     left: 2%;
     border-color: #ffeaa7;
     color: #e17055;

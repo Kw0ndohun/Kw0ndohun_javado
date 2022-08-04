@@ -45,13 +45,11 @@
         </div>
     </div>
 </nav>
-<div class="java" style="position: absolute; z-index: 5; width: 140px; height: 140px;"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
+<div class="java" style="position: absolute; z-index: 5; width: 15vw; height: 140px;"><img src="img/lion640.jpg" class="img-fluid" alt="..."></div>
 <%--    버튼목록 --%>
 <div class="container" id="btContainer">
 <div class="buttonContainer">
     <div class="buttons">
-        <button type="button" class="btn btn-outline-dark" draggable="true" value="|" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="auto" data-bs-content="|| 보다 빡빡하게 검사하는 곳" data-bs-trigger="hover">|</button>
-
         <button type="button" class="btn btn-outline-primary" draggable="true" value="int" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">int</button>
         <button type="button" class="btn btn-outline-secondary" draggable="true" value="String" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2" aria-controls="offcanvasScrolling">String</button>
         <button type="button" class="btn btn-outline-warning" draggable="true" value="double" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling3" aria-controls="offcanvasScrolling">double</button>
@@ -740,9 +738,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-bottom" id="footerIndex">
     <div class="container-fluid">
         <a class="navbar-brand" href="/" style="color: cadetblue;">JAVADO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <br>
             <span class="footerText">JAVADO |만든 이: 권도훈 |e-mail: ehgns0125@naver.com</span>

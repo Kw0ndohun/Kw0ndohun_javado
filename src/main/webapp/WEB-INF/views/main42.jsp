@@ -37,35 +37,20 @@
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-<%--        <div class="questionDiv2" id="m36Question2">for(int i </div>--%>
-<%--        <div class="questionDiv4" id="m36Question4">0; i<20; i++){} </div>--%>
-<%--        <div class="answerDiv2" id="step<%=step%>answerDiv2"></div>--%>
+
       </div>
     </div>
   </div>
 </div>
 <%--/사용할 버튼 드래그로 넣는 곳--%>
 <%--자바(캐릭터)가 있는 곳--%>
-<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 140px; height: 140px; top:-20%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
-    ↙ Click !!!
-    <span class="visually-hidden">unread messages</span>
-  </span></div>
-<%--콜랩스 자바가 문제를 알려주는 영역--%>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-      친구들을 방에 보내놓고 방 번호를 기억해서 부를 수 있어요. 친구들을 모와놓을 수 있는 블록을 넣어보세요.
-  </div>
-</div>
+<div class="javaLocation"></div>
 <%--실행화면--%>
 <div class="container" id="conScreen">
   <div class="screenContainer" >
   </div>
 </div>
-<%--어랏트--%>
-<div class="alert alert-dismissible alert-primary">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step<%=step%>예요. 이번 문제도 잘 풀어보아요.
-</div>
+
 <%--푸터--%>
 <div id="footer">
 </div>

@@ -21,22 +21,42 @@
 <%--헤더위치--%>
 <div id="header">
 </div>
+
+<div class="container" id="joinContainer">
 <form>
-  <input type="text" id="joinId" placeholder="아이디 입력해">
-  <input type="password" id="joinPw" placeholder="비밀번호 입력해">
-  <input type="text" id="joinName" placeholder="이름 입력해">
-  <input type="button" class="joinBt" value="가입!" onclick="join()">
+<fieldset>
+  <br>
+  <legend>JAVADO에 어서와요!</legend>
+
+  <div class="form-group">
+    <label for="joinId" class="form-label mt-4">아이디를 입력해요.</label>
+    <input type="email" class="form-control" id="joinId" aria-describedby="emailHelp" placeholder="아이디">
+    <small id="emailHelp" class="form-text text-muted">아이디와 비밀번호는 혼자만 알고 있어야 해요.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" class="form-label mt-4">비밀번호를 입력해요.</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호">
+  </div>
+  <div class="form-group">
+    <label for="joinName" class="form-label mt-4">이름을 입력해요.</label>
+    <input type="email" class="form-control" id="joinName" aria-describedby="emailHelp" placeholder="이름">
+  </div>
+  <input type="button" id="joinBt" class="btn btn-light" value="가입!" onclick="join()">
+</fieldset>
 </form>
+</div>
+
+
 <%--블록으로 넣어서 회원가입할 수 있게 로그인도 마찬가지로--%>
 <%--자바(캐릭터)가 있는 곳--%>
-<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 140px; height: 140px; top:-20%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-45%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
     ↙ Click !!!
     <span class="visually-hidden">unread messages</span>
   </span></div>
 <%--콜랩스 자바가 문제를 알려주는 영역--%>
-<div class="collapse" id="collapseExample">
+<div class="collapse show" id="collapseExample">
   <div class="card card-body">
-    안뇽
+    안녕. 난 자바야.
   </div>
 </div>
 

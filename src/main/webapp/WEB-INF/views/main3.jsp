@@ -53,17 +53,7 @@
 <%--    임시--%>
 
 <%--자바(캐릭터)가 있는 곳--%>
-<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 140px; height: 140px; top:-20%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
-    ↙ Click !!!
-    <span class="visually-hidden">unread messages</span>
-  </span></div>
-<%--콜랩스 자바가 문제를 알려주는 영역--%>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    1이는 문자열에 소속되었지만 한 글자인 1이는 좀 더 자기한테 맞는 한 글자들의 모임에 소속되고 싶어해요. 한 글자의 모임인 블록을 넣어보세요.
-  </div>
-</div>
-
+<div class="javaLocation"></div>
 <%--실행박스--%>
 <div class="container" id="conScreen">
   <div class="screenContainer" >
@@ -75,11 +65,6 @@
 
 
 
-<%--어랏트--%>
-<div class="alert alert-dismissible alert-primary">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step<%=step%>예요. 이번 문제도 잘 풀어보아요.
-</div>
 
 <%--푸터--%>
 <div id="footer">

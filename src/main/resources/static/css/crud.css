@@ -1,6 +1,24 @@
 *{
     text-align: center;
 }
+.java{
+    position: relative;
+    top: -20%;
+}
+.card-body{
+    width: 30vw;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    border-color: #ffeaa7;
+    color: #e17055;
+}
+
+#joinContainer{
+    width: 500px;
+    position: relative;
+    top: 10%;
+}
 
 .Container{
     background-color: white;
@@ -69,4 +87,8 @@ button{
 
 .alert{
     z-index: 5;
+}
+
+#joinBt{
+    margin-top: 15px;
 }

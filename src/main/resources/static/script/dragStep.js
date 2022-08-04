@@ -1,7 +1,17 @@
+//단계 배열과 단계에 맞는 정답 배열이 필요
+let step=1;
+step=parseInt(getParameterByName("step"));
+//step 파라미터가 없으면 step은 1을 디폴트로 가진다
+if(getParameterByName("step")===""){
+    step=1;
+}
+
 //인터벌 변수
 let step1go;
 let step29go;
 
+//자바 문제 대사 배열
+let javaAnswer=["1이 혼자 아무 곳에도 속하지 못 했어요. 1이가 숫자들의 모임에 속할 수 있게, 숫자들의 모임을 넣어주세요.","이제 1이가 숫자 모임인 int에 소속되었지만 소속을 바꿔야하게 되었어요. 1이가 문자열 소속이 될 수 있게 문자열 블록을 넣어주세요.","1이는 문자열에 소속되었지만 한 글자인 1이는 좀 더 자기한테 맞는 한 글자들의 모임에 소속되고 싶어해요. 한 글자의 모임인 블록을 넣어보세요.","1이는 20억보다 작은 숫자의 모임인 int보다 더 커질 수 있는 모임에 가입하게 되었어요. 20억보다 커질 수 있는 숫자들의 모임 블록을 넣어보세요.","1이는 키가 조금 컸습니다. 하지만 소수점 단위밖에 크질 못해서 보이지 않고 있어요. 1이를 소수점을 나타낼 수 있는 소속으로 바꿔주세요.","1이는 이제 왼쪽에 있는 친구랑 키를 합해보려고 해요. 합치는 블록을 넣어보세요.","1이의 키가 너무 커져서 위에 있는 친구의 키를 빼려고 해요. 빼는 블록을 넣어보세요.","이제 좀 더 위쪽에 있는 친구의 키와 곱해볼게요. 곱하기 블록을 넣어보세요.","이번엔 3 친구의 키랑 나누면 어떻게 되는지 볼까요? 나누기 블록을 넣어보세요.","친구들이 한 명씩 사라지는 걸 이상하게 여긴 다른 친구들이 모두 떠나버렸어요.. 1이는 텅텅 빈 곳들을 색칠하려고 해요. 반복할 수 있는 블록을 넣어보세요.","1이는 소속과 값을 가지고 있지만 이름이 없어요. 1이도 이름을 가질 때가 되었어요. 1이가 이름을 가질 수 있게 부등호를 넣어보세요.","이제 방금 배운 것으로 하나의 값을 바꿔볼까요. 하나의 값이 10이 될 수 있게 블록을 넣어보세요.","이제 하나의 소속을 가장 처음 소속했던 곳으로 되돌려봐요.","하나라는 이름을 그대로 쓸 수 없으니 하나2로 바꾸어 원래 소속으로 만들어 보세요.","하나2는 숫자 9와 만났어요. 누가 더 큰지 비교해보세요.","< 말고도 넣을 수 있는 것이 있어요. < 를 포함하여 같은지도 확인해주는 것이예요.","이번에는 숫자 15가 왔네요. 한번 비교해볼까요?","15는 자기가 하나2보다 더 가볍다며 화를 내고 있어요. 한 번 15의 말대로 15가 더 가볍다를 넣어볼까요?","15는 조금 멋쩍어 하네요. 하지만 아직 포기하지 않은 듯 해요. 이번엔 더 가볍진 않지만 같은 무게라고 하네요. 서로 같다를 의미하는 블록을 넣어봐요.","15는 부끄러워서 도망가버렸어요. 15가 가고 10이 찾아왔네요. ==가 진짜 같다는 것을 확인해주는지 봐볼까요?","친구들이 모두 모였어요! 서로 누가 무거운지 비교해보기로 했어요. 모든 친구들이 제대로 비교했는지 확인해보죠. 모두 정답이여야 하니 그리고를 뜻하는 블록을 넣어봐요.","15가 또 심술을 부려서 하나2가 더 무겁다로 바꿨어요. 그렇다면 한쪽만 진실이여도 진실이 나오는 또는을 뜻하는 블록을 넣어볼까요?","짝꿍이 바뀌었어요. 15는 여전히 자기가 더 가볍다고 주장하네요. 또는 보다 더 빡빡하게 검사하는 블록을 넣어보세요.","이번엔 그리고랑 같은 기능을 하면서 좀 더 빡빡하게 검사하는 블록을 넣어보세요.","이러한 조건들의 진실 거짓을 검사하는 블록이 있어요. 15가 똑바로 말하는지 검사해봐요. 진실이면 탐지기가 가진 것을 실행해줘요.","이번엔 반대로 바꿔놨어요. 이제 제대로 실행해줄거예요. 탐지기를 다시 넣어봐요!","탐지기가 작동하지 않았을 때 다른 조건으로 검사하는 탐지기가 있어요. 한 번 넣어볼까요.","조건 없이 if와 else if 모두가 탐지에 실패하면 자기가 가진 것을 실행해주는 블록이 있어요. 한 번 넣어보세요.","이전에 반복해주는 기능을 보여준 블록이 있어요. 이번엔 조건에 따라 반복해주는 블록을 사용해 볼게요.","반복을 중간에 멈출 수 있어요. 반복을 나가주는 블록을 넣어보세요.","반복하다가 처음으로 돌아갈 수 있어요. 다시하기 블록을 넣어보세요.","정해진 값을 주는 블록이 있어요. break처럼 반복을 즉시 나가주기도 해요. 15를 날씬하게 만들어줄까요? 값을 주는 블록을 찾아서 넣어보세요.","하나2를 이동시키는 기능을 가진 if가 있어요. () 안의 식을 완성해서 if의 기능을 실행해보세요.","if를 실행하지 못했어요. 그 다음 탐지기를 꺼내야해요. if 다음에 사용될 탐지기를 넣어서 기능이 작동되게 해보세요.","if와 else if, else는 {} 안에 실행할 기능을 담아요. if가 실행되지 않았을 때 {}가 실행되게 해보세요.","앞에 있는 조건을을 먼저 검사하고 뒤에 있는 조건을 검사할 수 있게 블록을 넣어보세요.","if를 따로 쓰면 두 개의 식을 따로 따로 검사할 수 있어요. 한번 블록을 넣어보세요.","while도 if처럼 () 안에 조건이 진실이여야 기능이 작동해요. 반복되도록 블록을 넣어보세요.","for은 조금 특이한 식을 조건을 가져요. 가운데 있는 식이 진실이여야 실행이 되요. i=0이네요. 블록을 넣어보세요.","그럼 첫번째는 무엇일까요? 1이에게 이름을 지어준 것처럼 i라는 이름과 소속 값을 준거예요. 한 번 식을 완성해보세요.","이번엔 세번째 식을 볼게요. i++ 라고 되어 있었는데 반복될 때마다 i에게 +1을 해주는거예요. 한 번 블록을 넣어보세요.","친구들을 방에 보내놓고 방 번호를 기억해서 부를 수 있어요. 친구들을 모와놓을 수 있는 블록을 넣어보세요.","방 번호는 0부터 시작해요. 하나2는 0번 방에 들어갔었어요. 한 번 불러볼까요? 친구들을 모와둔 블록을 넣어보세요.","0번방을 불러볼게요. 다시 블록을 넣어보세요.",""];
 //블록버튼들 세팅
     $.ajax({
        type:"get",
@@ -46,7 +56,7 @@ let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           </div>
         </li>
         </ul>
-        <button class="btn btn-primary my-2 my-sm-0" id="login">login
+        <button class="btn btn-primary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span></a></button>
         <span class="visually-hidden">(current)</span></button>
       </form>
     </div>
@@ -57,9 +67,7 @@ $("#header").append(header);
 let footer=`<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-bottom" id="footerIndex">
     <div class="container-fluid">
         <a class="navbar-brand" href="/" style="color: cadetblue;">JAVADO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+       
         <div class="collapse navbar-collapse" id="navbarColor01">
             <br>
             <span class="footerText">JAVADO |만든 이: 권도훈 |e-mail: ehgns0125@naver.com</span>
@@ -74,6 +82,17 @@ for(let n=2; n<51; n++){
     let txt=`<a class="dropdown-item" href="main${n}?step=${n}">step${n}</a>`;
     $(".dropdown-menu").append(txt);
 }
+//자바 캐릭터 어팬드
+let java=`<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-30%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+    ↙ Click !!!
+    <span class="visually-hidden">unread messages</span>
+  </span></div>
+<div class="collapse show" id="collapseExample">
+  <div class="card card-body">
+    ${javaAnswer[step-1]}
+  </div>
+</div>`;
+$(".javaLocation").append(java);
 
 //컬러 배열
 let colors=["#81ecec","#74b9ff","#ffeaa7","#fab1a0","#ff7675","#55efc4","#636e72","#a29bfe"];
@@ -92,13 +111,7 @@ let successAlertScript=["1이가 무사히 숫자 모임에 소속될 수 있었
 //        data:,
 //        success:function(res){
 
-//단계 배열과 단계에 맞는 정답 배열이 필요
-let step=1;
-step=parseInt(getParameterByName("step"));
-//step 파라미터가 없으면 step은 1을 디폴트로 가진다
-if(getParameterByName("step")===""){
-    step=1;
-}
+
 //단계를 통과했는지 최종 체크 /sql저장?
 //                      /5       /10       /15       /20       /25       /30       /35       /40       /45       /50
 let stepClears=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];

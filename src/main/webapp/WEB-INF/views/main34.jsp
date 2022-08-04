@@ -45,26 +45,13 @@
 </div>
 <%--/사용할 버튼 드래그로 넣는 곳--%>
 <%--자바(캐릭터)가 있는 곳--%>
-<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 140px; height: 140px; top:-20%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
-    ↙ Click !!!
-    <span class="visually-hidden">unread messages</span>
-  </span></div>
-<%--콜랩스 자바가 문제를 알려주는 영역--%>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    if를 실행하지 못했어요. 그 다음 탐지기를 꺼내야해요. 이 코드는 15를 10배 크게 만드는 기능을 가지고 있어요. if 다음에 사용될 탐지기를 넣어서 기능이 작동되게 해보세요.
-  </div>
-</div>
+<div class="javaLocation"></div>
 <%--실행화면--%>
 <div class="container" id="conScreen">
   <div class="screenContainer" >
   </div>
 </div>
-<%--어랏트--%>
-<div class="alert alert-dismissible alert-primary">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <strong>좋아요!</strong> 이제 Step<%=step%>예요. 이번 문제도 잘 풀어보아요.
-</div>
+
 <%--푸터--%>
 <div id="footer">
 </div>
