@@ -1,0 +1,72 @@
+*{
+    text-align: center;
+}
+
+.Container{
+    background-color: white;
+}
+.column{
+    background-color: azure;
+}
+
+.alert{
+    bottom: 0%;
+    width: 100vw;
+    position: fixed;
+}
+
+ul{
+    list-style:none;
+}
+
+#login{
+    position: relative;
+    top: 5px;
+}
+
+.buttonContainer{
+    position: relative;
+    top: 15%;
+
+}
+#btContainer{
+    position: relative;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
+
+button{
+    margin: 5px;
+}
+
+#footerIndex{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+}
+
+.footerText{
+    position: relative;
+    left: 30%;
+}
+
+.alert alert-dismissible alert-secondary{
+    z-index: 5;
+}
+
+
+.bear{
+    position: absolute;
+    bottom: 100px;
+    height: 400px;
+    width: 300px;
+    max-width: 300px;
+    left: 10%;
+}
+
+.alert{
+    z-index: 5;
+}

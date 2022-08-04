@@ -39,7 +39,8 @@
 
             </ul>
             <form class="d-flex">
-                <button class="btn btn-secondary my-2 my-sm-0" id="login">login</button>
+                    <button class="btn btn-secondary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span>
+                </a></button>
             </form>
         </div>
     </div>
@@ -750,8 +751,8 @@
 </nav>
 <%--푸터--%>
 
-<script src="script/login.js"></script>
+
 <script src="script/drag.js"></script>
-<script src="script/njoin.js"></script>
+
 </body>
 </html>

@@ -46,7 +46,8 @@ let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           </div>
         </li>
         </ul>
-        <button class="btn btn-primary my-2 my-sm-0" id="login">login</button>
+        <button class="btn btn-primary my-2 my-sm-0" id="login">login
+        <span class="visually-hidden">(current)</span></button>
       </form>
     </div>
   </div>
@@ -1460,3 +1461,6 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
 })
 
+$("#login").click(function(){
+    location.href="/join";
+});

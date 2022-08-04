@@ -12,6 +12,16 @@ public class mainController {
 //        return "index.html";
         return "index";
     }
+    @RequestMapping("/join" )
+    public String join(){
+
+        return "join";
+    }
+    @RequestMapping("/login" )
+    public String login(){
+
+        return "login";
+    }
     @RequestMapping("/main" )
     public String main(){
 
