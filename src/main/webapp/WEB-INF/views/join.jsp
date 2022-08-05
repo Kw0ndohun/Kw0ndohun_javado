@@ -15,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <link rel="stylesheet" href="css/crud.css">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <title>가입</title>
 </head>
 <body>

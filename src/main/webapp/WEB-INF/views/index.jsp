@@ -17,6 +17,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <!-- favicon image -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <meta property="og:title" content="JAVADO!">
+    <meta property="og:description" content="어린이 자바 학습 사이트입니다. 블록을 이용해서 쉽고 간단하게 자바를 익힐 수 있습니다.">
+    <meta property="og:image" content="img/mainimage.png">
     <title>인덱스</title>
 </head>
 <body>
