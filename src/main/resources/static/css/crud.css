@@ -13,11 +13,24 @@
     border-color: #ffeaa7;
     color: #e17055;
 }
-
+#loginField{
+    width: 30vw;
+}
 #joinContainer{
     width: 500px;
     position: relative;
     top: 10%;
+}
+#loginComment{
+    top:60%;
+}
+#loginBox{
+    width: 500px;
+    position: relative;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Container{

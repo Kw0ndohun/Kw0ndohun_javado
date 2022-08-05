@@ -1,6 +1,6 @@
 //login logout 버튼 체인지 변수
 let logBt;
-if(sessionStorage.getItem("log")===null){
+if(sessionStorage.getItem("log")===""){
     logBt=`<button class="btn btn-primary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span></a></button>
         <span class="visually-hidden">(current)</span></button>`;
 }
@@ -49,6 +49,18 @@ let footer=`<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed
 $("#footer").append(footer);
 
 
+function validation(){
+    if($("#joinId").val()==="" || $("#joinPw").val()==="" || $("#joinName").val() === "") {
+        Swal.fire(
+            '실패!',
+            `빈칸이 있습니다.`,
+            'error'
+        )
+    }
+    else{
+        join();
+    }
+}
 
 function join(){
     let join={
@@ -63,11 +75,23 @@ function join(){
         contentType: "application/json",
         data: JSON.stringify(join),
         success: function (res){
+            console.log(res);
             if(res){
-                alert("가입완료! 어서 로그인 해서 공부하자!");
+                Swal.fire(
+                    '가입완료!',
+                    `가입완료! 어서 로그인 해서 공부하자!`,
+                    'success'
+                ).then(function(){
+                    location.href="/login";
+
+                })
             }
             else{
-                alert("중복된 아이디입니다!");
+                Swal.fire(
+                    '가입실패!',
+                    `중복된 아이디입니다!`,
+                    'error'
+                )
             }
         }
     });
@@ -87,12 +111,22 @@ function login(){
         data: JSON.stringify(login),
         success: function (res){
             if(res===""){
-                alert("아이디 또는 비밀번호가 틀렸습니다.");
+                Swal.fire(
+                    '로그인 실패!',
+                    `아이디 또는 비밀번호가 틀렸습니다.`,
+                    'error'
+                )
             }
             else{
                 sessionStorage.setItem("log",`${res}`);
-                alert("로그인 완료!");
-                location.href="/";
+                Swal.fire(
+                    '로그인 완료!',
+                    `공부하러 가봐요!`,
+                    'success'
+                ).then(function(){
+                    location.href="/";
+
+                })
             }
         }
     });
@@ -124,7 +158,6 @@ function myPageSetting(){
                 }
             }
             else{
-                alert("완료!");
                 location.href="/";
             }
         }

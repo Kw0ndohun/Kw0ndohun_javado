@@ -36,8 +36,10 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
+        <div class="questionDiv4" id="m36Question4">안녕/친구</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv2" id="m43Question2">[0] </div>
+        <div class="questionDiv2" id="m43Question2"> "/" </div>
+        <%--        <div class="answerDiv2" id="step<%=step%>answerDiv2"></div>--%>
       </div>
     </div>
   </div>

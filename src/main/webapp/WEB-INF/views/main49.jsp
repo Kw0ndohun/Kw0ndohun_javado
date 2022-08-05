@@ -36,8 +36,9 @@
   <div class="column" id="inButton">
     <div class="list-group-item" draggable="true"><h1>무엇이 들어갈까요</h1>
       <div class="container" id="inButtonBox">
+        <div class="questionDiv4" id="m49Question4">자바는 재밌지?</div>
         <div class="answerDiv" id="step<%=step%>answerDiv"></div>
-        <div class="questionDiv2" id="m43Question2">[0] </div>
+        <div class="questionDiv2" id="m43Question2"> 0 </div>
       </div>
     </div>
   </div>

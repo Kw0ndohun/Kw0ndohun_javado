@@ -26,8 +26,10 @@ public class UsersService {
                 if(checkId!=null){
                     return checkId;
                 }
+                return null;
+
             }
-            return null;
+            return new UserVO("","","","");
         }
     //getUser login
     public UserVO getUser(UserDto userDto){

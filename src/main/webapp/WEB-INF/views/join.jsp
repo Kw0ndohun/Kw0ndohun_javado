@@ -30,18 +30,18 @@
 
   <div class="form-group">
     <label for="joinId" class="form-label mt-4">아이디를 입력해요.</label>
-    <input type="email" class="form-control" id="joinId" aria-describedby="emailHelp" placeholder="아이디">
+    <input type="email" class="form-control" id="joinId" aria-describedby="emailHelp" placeholder="아이디" required>
     <small id="emailHelp" class="form-text text-muted">아이디와 비밀번호는 혼자만 알고 있어야 해요.</small>
   </div>
   <div class="form-group">
     <label for="joinPw" class="form-label mt-4" >비밀번호를 입력해요.</label>
-    <input type="password" class="form-control" id="joinPw" placeholder="비밀번호">
+    <input type="password" class="form-control" id="joinPw" placeholder="비밀번호" required>
   </div>
   <div class="form-group">
     <label for="joinName" class="form-label mt-4">이름을 입력해요.</label>
-    <input type="email" class="form-control" id="joinName" aria-describedby="emailHelp" placeholder="이름">
+    <input type="email" class="form-control" id="joinName" aria-describedby="emailHelp" placeholder="이름" required>
   </div>
-  <input type="button" id="joinBt" class="btn btn-light" value="가입!" onclick="join()">
+  <input type="button" id="joinBt" class="btn btn-light" value="가입!" onclick="validation()">
 </fieldset>
 </form>
 </div>

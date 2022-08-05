@@ -256,6 +256,21 @@ ul{
 #m43Question2{
     width: 40px;
 }
+#m46Question4{
+    width: 110px;
+}
+#m50Question2{
+    width: 160px;
+}
+#m50Question4{
+    width: 160px;
+}
+#m48Question4{
+    width: 140px;
+}
+#m49Question4{
+    width: 140px;
+}
 
 
 /*문제 칸 크기*/
@@ -456,4 +471,16 @@ h1{
 }
 #step41answerDiv{
     width:65px;
+}
+#step47answerDiv{
+    width:120px;
+}
+#step48answerDiv{
+    width:120px;
+}
+#step49answerDiv{
+    width:120px;
+}
+#step50answerDiv{
+    width:100px;
 }

@@ -20,6 +20,7 @@ public class userController {
     @GetMapping("/v1/search/users")
     public UserVO getUsers(@RequestBody UserDto userDto) {
         UserVO user=usersService.readUsers(userDto);
+        System.out.println(user);
         return user;
     }
 
@@ -27,6 +28,7 @@ public class userController {
     public boolean joinUser(@RequestBody UserDto userDto) {
         //중복아이디가 없으면 null
         UserVO duplCheckId= getUsers(userDto);
+        System.out.println(duplCheckId);
         if(duplCheckId==null){
             usersService.joinUser(userDto);
             return true;
