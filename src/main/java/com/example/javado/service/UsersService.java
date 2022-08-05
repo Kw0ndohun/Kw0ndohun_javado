@@ -4,6 +4,7 @@ import com.example.javado.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,5 +54,12 @@ public class UsersService {
             return usersRepository.save(user);
         }
 
-
+    //update clearStep
+        @Transactional //조회된 기존 객체를 업데이트 해준다
+        public void updateUser(UserDto userDto){
+            UserVO user = usersRepository.findById(userDto.getId()).orElseThrow(
+                    ()-> new IllegalArgumentException("존재하지 않는 아이디입니다.")
+            );
+            user.update(userDto);
+        }
 }

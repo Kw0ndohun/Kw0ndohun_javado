@@ -40,7 +40,7 @@ public class UserVO {
 
     //setter 를 쓰지 않고 requestDto 객체를 파라미터로 받는 update() 메소드 생성
 
-    public void update(UserVO userVO){
-        this.name=userVO.getName();
+    public void update(UserDto userDto){
+        this.clear=userDto.getClear();
     }
 }

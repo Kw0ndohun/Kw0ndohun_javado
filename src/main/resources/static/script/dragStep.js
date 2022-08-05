@@ -161,13 +161,15 @@ function stepClearCheck(){
             '다음 단계로~',
             'success'
         )
+        if(sessionStorage.getItem("log")!==null && sessionStorage.getItem("log")!==""){
+            getClearStep();
+        }
         stepClears[step-1]=1;
         sessionStorage.setItem("success","1");
         $("#nextStep").attr("class","btn btn-primary");
         screenRun();
     }
 }
-
 
 
 //드랍이 되면 정답을 검증하고 > 트루를 반환해서 Html에 있는 자바문이 가동되게끔
@@ -183,7 +185,52 @@ let draggable =new Sortable(buttons, {
     ghostClass: "blue-background-class"
 });
 
-
+//정답위치
+const answerDiv = document.body.querySelector(".answerDiv");
+// const answerDiv = document.querySelectorAll(".answerDiv");
+// answerDiv.forEach((answerDiv) => {
+let answerBox=new Sortable(answerDiv, {
+    group: "shared",
+    animation: 150,
+    ghostClass: "blue-background-class",
+    onAdd:function(e){
+        // for(let n=answerCountCntMin; n<answerCountCntMin+1; n++){
+        if(e.item.getAttribute("value")===answer[answerCountCntMin]){
+            answerCheck[answerCountCntMin]=1;
+        }
+        // }
+        if(stepClears[step-1]===0){
+            stepClearCheck();
+        }
+    },
+    // 블록이 밖으로 나가서 다른 위치로 이동하면 해당 블록 제거
+    onRemove:function (e) {
+        e.item.parentNode.removeChild(e.item);
+    }
+});
+// });
+const answerDiv2 = document.querySelectorAll(".answerDiv2");
+answerDiv2.forEach((answerDiv2) => {
+    new Sortable(answerDiv2, {
+        group: "shared",
+        animation: 150,
+        ghostClass: "blue-background-class",
+        onAdd:function(e){
+            for(let n=answerCountCntMin+1; n<answerCountCntMin+2; n++){
+                if(e.item.getAttribute("value")===answer[n]){
+                    answerCheck[n]=1;
+                }
+            }
+            if(stepClears[step-1]===0){
+                stepClearCheck();
+            }
+        },
+        // 블록이 밖으로 나가서 다른 위치로 이동하면 해당 블록 제거
+        onRemove:function (e) {
+            e.item.parentNode.removeChild(e.item);
+        }
+    });
+});
 
 // =================== 맵세팅 영역================== //
 
@@ -911,51 +958,7 @@ function setStep44map(){
 
 // =================== 맵세팅 영역================== //
 
-//정답위치
-const answerDiv = document.querySelectorAll(".answerDiv");
-answerDiv.forEach((answerDiv) => {
-    new Sortable(answerDiv, {
-        group: "shared",
-        animation: 150,
-        ghostClass: "blue-background-class",
-        onAdd:function(e){
-            // for(let n=answerCountCntMin; n<answerCountCntMin+1; n++){
-                if(e.item.getAttribute("value")===answer[answerCountCntMin]){
-                    answerCheck[answerCountCntMin]=1;
-                }
-            // }
-            if(stepClears[step-1]===0){
-                stepClearCheck();
-            }
-        },
-        // 블록이 밖으로 나가서 다른 위치로 이동하면 해당 블록 제거
-        onRemove:function (e) {
-          e.item.parentNode.removeChild(e.item);
-        }
-    });
-});
-const answerDiv2 = document.querySelectorAll(".answerDiv2");
-answerDiv2.forEach((answerDiv2) => {
-    new Sortable(answerDiv2, {
-        group: "shared",
-        animation: 150,
-        ghostClass: "blue-background-class",
-        onAdd:function(e){
-            for(let n=answerCountCntMin+1; n<answerCountCntMin+2; n++){
-                if(e.item.getAttribute("value")===answer[n]){
-                    answerCheck[n]=1;
-                }
-            }
-            if(stepClears[step-1]===0){
-                stepClearCheck();
-            }
-        },
-        // 블록이 밖으로 나가서 다른 위치로 이동하면 해당 블록 제거
-        onRemove:function (e) {
-            e.item.parentNode.removeChild(e.item);
-        }
-    });
-});
+
 
 // sessionStorage.setItem("step",`${step}`);
 function nextClick(){
@@ -1493,10 +1496,10 @@ function logout(){
     sessionStorage.clear();
     location.href="/";
 }
-
-
-function clearStepUpdate(){
-    let clearStep;
+let clearUpdateRun=0;
+//클리어 단계 중복 체크
+let clearStep="";
+function clearDuplCheck(){
     let log={
         "id":sessionStorage.getItem("log")
     };
@@ -1506,7 +1509,64 @@ function clearStepUpdate(){
         contentType: "application/json",
         data: JSON.stringify(log),
         success: function (res){
-            clearStep=res;
+            if(res!==null){
+                for(let n=0; n<res.length; n++){
+                    if(parseInt(res[n])===step){
+                        clearUpdateRun=1;
+                    }
+                }
+            }
         }
+    }).done(rs => {
+        stepUpdate(clearStep);
     });
 }
+
+// 업데이트
+function stepUpdate(clearStep){
+    let clear="";
+    if(clearStep===""){
+        clear=step;
+    }
+    else{
+        clear=clearStep+"/"+step;
+    }
+    if(clearUpdateRun===0){
+        let updateUser={
+            "id":sessionStorage.getItem("log"),
+            "pw":"",
+            "name":"",
+            "clear":clear
+        }
+        $.ajax({
+            type:"put",
+            url:"v1/update/user",
+            contentType: "application/json",
+            data: JSON.stringify(updateUser),
+            success: function (res){
+                clearUpdateRun=0;
+            }
+        });
+    }
+}
+
+function getClearStep(){
+    let log={
+        "id":sessionStorage.getItem("log")
+    };
+    $.ajax({
+        type:"post",
+        url:"v1/return/user",
+        contentType: "application/json",
+        data: JSON.stringify(log),
+        success: function (res){
+            clearStep=res[3];
+        }
+    }).done(rs => {
+        clearDuplCheck();
+    });
+
+    return clearStep;
+}
+
+

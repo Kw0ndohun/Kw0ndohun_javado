@@ -7,10 +7,7 @@ import com.example.javado.domain.UserVO;
 import com.example.javado.service.ButtonsService;
 import com.example.javado.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -48,6 +45,21 @@ public class userController {
         return "";
     }
 
+    //유저 전체 반환
+    @PostMapping("/v1/return/user")
+    public String[] returnUser(@RequestBody UserDto userDto) {
+        UserVO user=usersService.getUser(userDto);
+        if(user!=null){
+            String id=user.getId();
+            String pw=user.getPw();
+            String name=user.getName();
+            String clear=user.getClear();
+            String[] userData= {id,pw,name,clear};
+            return userData;
+        }
+        return null;
+    }
+
 //        유저의 클리어 단계를 가져와줌
     @PostMapping("/v1/get/clear")
     public String[] getClearStep(@RequestBody UserDto userDto){
@@ -60,6 +72,12 @@ public class userController {
             return null;
         }
         return null;
+    }
+
+    //유저 클리어단계 업데이트
+    @PutMapping("/v1/update/user")
+    public void updateUser(@RequestBody UserDto userDto){
+        usersService.updateUser(userDto);
     }
 
 }
