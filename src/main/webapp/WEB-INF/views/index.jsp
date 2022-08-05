@@ -39,8 +39,7 @@
 
             </ul>
             <form class="d-flex">
-                    <button class="btn btn-secondary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span>
-                </a></button>
+
             </form>
         </div>
     </div>

@@ -38,6 +38,15 @@ public class UsersService {
         }
         return null;
     }
+    public UserVO getUser(String log){
+        boolean checkDupl;
+        checkDupl = usersRepository.existsById(log);
+        if(checkDupl){
+            UserVO checkId=usersRepository.findById(log).orElse(null);
+            return checkId;
+        }
+        return null;
+    }
     //join
         public UserVO joinUser(UserDto userDto){
             UserVO user=new UserVO(userDto);

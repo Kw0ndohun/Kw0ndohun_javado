@@ -1,3 +1,13 @@
+//login logout 버튼 체인지 변수
+let logBt;
+if(sessionStorage.getItem("log")===null){
+    logBt=`<button class="btn btn-primary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span></a></button>
+        <span class="visually-hidden">(current)</span></button>`;
+}
+else{
+    logBt=`<input type="button" id="joinBt" class="btn btn-primary" value="logout" onclick="logout()">`;
+}
+
 //헤더 어팬드
 let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
@@ -19,7 +29,7 @@ let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <ul id="floor">
         
         </ul>
-        <button class="btn btn-primary my-2 my-sm-0" id="login">login</button>
+        ${logBt}
       </form>
     </div>
   </div>
@@ -44,7 +54,8 @@ function join(){
     let join={
         "id": $("#joinId").val(),
         "pw": $("#joinPw").val(),
-        "name": $("#joinName").val()
+        "name": $("#joinName").val(),
+        "clear": ""
     }
     $.ajax({
         type:"post",
@@ -63,7 +74,7 @@ function join(){
 }
 
 
-// v1/login/user
+// 로그인
 function login(){
     let login={
         "id": $("#loginId").val(),
@@ -76,13 +87,52 @@ function login(){
         data: JSON.stringify(login),
         success: function (res){
             if(res===""){
-                alert("아이디나 비밀번호가 틀렸습니다.");
+                alert("아이디 또는 비밀번호가 틀렸습니다.");
             }
             else{
+                sessionStorage.setItem("log",`${res}`);
                 alert("로그인 완료!");
-                sessionStorage.setItem("log",`${res}`)
                 location.href="/";
             }
         }
     });
+}
+
+// 마이페이지 세팅
+let tableColor=["table-primary","table-secondary","table-success","table-danger","table-warning","table-info"];
+let comment=["참 잘했어요!","대단해요!!","조금 더 노력해볼까요?","우와!!","벌써 이걸 풀었어요?","엄청나요!","앞으로도 힘내봐요!","코딩의 재미를 느껴봐요!","이제 코딩 고수!!"];
+function myPageSetting(){
+    let log={
+        "id":sessionStorage.getItem("log")
+    };
+    $.ajax({
+        type:"post",
+        url:"v1/get/clear",
+        contentType: "application/json",
+        data: JSON.stringify(log),
+        success: function (res){
+            if(res!==null){
+                for(let n=0; n<res.length; n++){
+                    let ranCom=Math.floor(Math.random() * 8+1);
+                    let ranColor=Math.floor(Math.random() * 5+1);
+                    let clear=`<tr class=${tableColor[ranColor]}>
+                                <th scope="row">${res[n]}</th>
+                                <td>${comment[ranCom]}</td>
+                                <td><i class="fa-solid fa-check"></i></td>
+                              </tr>`;
+                    $("#clearList").append(clear);
+                }
+            }
+            else{
+                alert("완료!");
+                location.href="/";
+            }
+        }
+    });
+}
+myPageSetting();
+
+function logout(){
+    sessionStorage.clear();
+    location.href="/";
 }

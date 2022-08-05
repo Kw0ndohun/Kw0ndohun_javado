@@ -47,5 +47,20 @@ public class userController {
         }
         return "";
     }
+
+//        유저의 클리어 단계를 가져와줌
+    @PostMapping("/v1/get/clear")
+    public String[] getClearStep(@RequestBody UserDto userDto){
+        UserVO user=usersService.getUser(userDto.getId());
+        if(user!=null && user.getClear()!=null){
+            if(!user.getClear().equals("")){
+                String clearArray[]=user.getClear().split("/");
+                return clearArray;
+            }
+            return null;
+        }
+        return null;
+    }
+
 }
 

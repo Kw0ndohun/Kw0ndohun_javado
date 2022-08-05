@@ -22,6 +22,11 @@ public class mainController {
 
         return "login";
     }
+    @RequestMapping("/myPage" )
+    public String myPage(){
+
+        return "myPage";
+    }
     @RequestMapping("/main" )
     public String main(){
 

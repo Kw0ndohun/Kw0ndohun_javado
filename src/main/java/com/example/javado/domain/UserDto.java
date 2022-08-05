@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class UserDto {
-    private String name,id,pw;
+    private String name,id,pw,clear;
 }

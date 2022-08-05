@@ -9,6 +9,10 @@
     background-color: azure;
 }
 
+#loginBt,#myPageBt{
+    margin-top: 15px;
+}
+
 .alert{
     bottom: 0%;
     width: 100vw;

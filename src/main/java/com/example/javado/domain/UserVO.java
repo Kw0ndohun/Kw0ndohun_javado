@@ -23,13 +23,18 @@ public class UserVO {
     private String pw;
     @Column(name = "name")
     private String name;
+
+
     @Id
     private String id;
+    @Column(name = "clear")
+    private String clear;
 
     public UserVO(UserDto userDto){
         this.id=userDto.getId();
         this.pw=userDto.getPw();
         this.name=userDto.getName();
+        this.clear=userDto.getClear();
     }
 
 

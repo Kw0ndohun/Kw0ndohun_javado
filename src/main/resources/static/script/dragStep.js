@@ -29,6 +29,17 @@ let javaAnswer=["1이 혼자 아무 곳에도 속하지 못 했어요. 1이가 �
        }
     });
 
+//login logout 버튼 체인지 변수
+let logBt;
+if(sessionStorage.getItem("log")===null  || sessionStorage.getItem("log")===""){
+    logBt=`<button class="btn btn-primary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span></a></button>
+        <span class="visually-hidden">(current)</span></button>`;
+}
+else{
+    logBt=`<input type="button" id="loginBt" class="btn btn-primary" value="logout" onclick="logout()">
+<input type="button" id="myPageBt" class="btn btn-primary" value="내 정보" onclick="location.href='/myPage'">`;
+}
+
 //헤더 어팬드
 let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
@@ -56,8 +67,7 @@ let header=`<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           </div>
         </li>
         </ul>
-        <button class="btn btn-primary my-2 my-sm-0" id="login"><a class="nav-link active" href="/login">login<span class="visually-hidden">(current)</span></a></button>
-        <span class="visually-hidden">(current)</span></button>
+        ${logBt}
       </form>
     </div>
   </div>
@@ -1477,3 +1487,26 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 $("#login").click(function(){
     location.href="/join";
 });
+
+
+function logout(){
+    sessionStorage.clear();
+    location.href="/";
+}
+
+
+function clearStepUpdate(){
+    let clearStep;
+    let log={
+        "id":sessionStorage.getItem("log")
+    };
+    $.ajax({
+        type:"post",
+        url:"v1/get/clear",
+        contentType: "application/json",
+        data: JSON.stringify(log),
+        success: function (res){
+            clearStep=res;
+        }
+    });
+}

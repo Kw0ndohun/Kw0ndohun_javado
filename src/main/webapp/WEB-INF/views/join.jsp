@@ -34,8 +34,8 @@
     <small id="emailHelp" class="form-text text-muted">아이디와 비밀번호는 혼자만 알고 있어야 해요.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1" class="form-label mt-4">비밀번호를 입력해요.</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호">
+    <label for="joinPw" class="form-label mt-4" >비밀번호를 입력해요.</label>
+    <input type="password" class="form-control" id="joinPw" placeholder="비밀번호">
   </div>
   <div class="form-group">
     <label for="joinName" class="form-label mt-4">이름을 입력해요.</label>
@@ -68,7 +68,7 @@
 <div id="footer">
 </div>
 <%--푸터--%>
-<script src="script/join.js"></script>
+<script src="script/crud.js"></script>
 
 </body>
 </html>
