@@ -97,9 +97,10 @@
 
 .alert{
     bottom: 0%;
-    width: 100vw;
-    position: fixed;
+    width: 50vw;
+    position: relative;
     z-index: 5;
+    left: 25%;
 }
 
 .progress{

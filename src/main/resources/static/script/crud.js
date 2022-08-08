@@ -124,6 +124,10 @@ function duplIdCheck(){
                     $("#notDupl").attr("style","color: red; display: none;");
                 }
             }
+            else{
+                $("#notDupl").attr("style","color: red; display: none;");
+                $("#dupl").attr("style","color: red; display: none;");
+            }
 
         }
     });
