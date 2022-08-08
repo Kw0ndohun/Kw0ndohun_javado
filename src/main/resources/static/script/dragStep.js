@@ -93,7 +93,7 @@ for(let n=2; n<51; n++){
     $(".dropdown-menu").append(txt);
 }
 //자바 캐릭터 어팬드
-let java=`<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-30%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+let java=`<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-20% margin-b"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
     ↙ Click !!!
     <span class="visually-hidden">unread messages</span>
   </span></div>

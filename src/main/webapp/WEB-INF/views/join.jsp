@@ -30,10 +30,12 @@
   <legend>JAVADO에 어서와요!</legend>
 
   <div class="form-group">
-    <label for="joinId" class="form-label mt-4">아이디를 입력해요.</label>
-    <input type="email" class="form-control" id="joinId" aria-describedby="emailHelp" placeholder="아이디" required>
+    <label for="joinId" class="form-label mt-4" >아이디를 입력해요.</label>
+    <input type="email" class="form-control" oninput="duplIdCheck()" id="joinId" aria-describedby="emailHelp" placeholder="아이디" required>
     <small id="emailHelp" class="form-text text-muted">아이디와 비밀번호는 혼자만 알고 있어야 해요.</small>
   </div>
+  <span id="dupl" style="color: red; display: none;">이 아이디는 사용중입니다.</span>
+  <span id="notDupl" style="color: red; display: none;">이 아이디는 사용할 수 있습니다.</span>
   <div class="form-group">
     <label for="joinPw" class="form-label mt-4" >비밀번호를 입력해요.</label>
     <input type="password" class="form-control" id="joinPw" placeholder="비밀번호" required>
@@ -50,7 +52,7 @@
 
 <%--블록으로 넣어서 회원가입할 수 있게 로그인도 마찬가지로--%>
 <%--자바(캐릭터)가 있는 곳--%>
-<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-45%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
+<div class="java" data-bs-toggle="collapse" href="#collapseExample" style="position: relative; z-index: 5; width: 15vw; height: 140px; top:-40%"><img src="img/lion640.jpg" class="img-fluid" alt="..."><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="clickBatge">
     ↙ Click !!!
     <span class="visually-hidden">unread messages</span>
   </span></div>

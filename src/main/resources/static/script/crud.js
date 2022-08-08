@@ -97,6 +97,38 @@ function join(){
     });
 }
 
+//아이디 중복 실시간 체크
+function duplIdCheck(){
+    let join={
+        "id": $("#joinId").val(),
+        "pw": "",
+        "name": "",
+        "clear": ""
+    }
+    $.ajax({
+        type:"post",
+        url:"v1/check/user",
+        contentType: "application/json",
+        data: JSON.stringify(join),
+        success: function (res){
+            console.log($("#joinId").val());
+            if($("#joinId").val()!==""){
+                if(res){
+                    console.log($("#joinId").val());
+                    $("#dupl").attr("style","color: red; display: none;");
+                    $("#notDupl").attr("style","color: red; display: inline-block;");
+                }
+                else{
+                    console.log($("#joinId").val());
+                    $("#dupl").attr("style","color: red; display: inline-block;");
+                    $("#notDupl").attr("style","color: red; display: none;");
+                }
+            }
+
+        }
+    });
+}
+
 
 // 로그인
 function login(){
@@ -150,7 +182,7 @@ function myPageSetting(){
                     let ranCom=Math.floor(Math.random() * 8+1);
                     let ranColor=Math.floor(Math.random() * 5+1);
                     let clear=`<tr class=${tableColor[ranColor]}>
-                                <th scope="row">${res[n]}</th>
+                                <th scope="row"><a href="/main?step=${res[n]}"> ${res[n]}</a></th>
                                 <td>${comment[ranCom]}</td>
                                 <td><i class="fa-solid fa-check"></i></td>
                               </tr>`;

@@ -89,6 +89,12 @@
     height: 80px;
 }
 
+.img-fluid{
+    position: relative;
+    margin-bottom: 20px;
+    top:-20%;
+}
+
 .alert{
     bottom: 0%;
     width: 100vw;

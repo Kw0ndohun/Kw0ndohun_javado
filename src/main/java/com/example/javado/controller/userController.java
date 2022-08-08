@@ -28,9 +28,19 @@ public class userController {
     public boolean joinUser(@RequestBody UserDto userDto) {
         //중복아이디가 없으면 null
         UserVO duplCheckId= getUsers(userDto);
-        System.out.println(duplCheckId);
+
         if(duplCheckId==null){
             usersService.joinUser(userDto);
+            return true;
+        }
+        return false;
+    }
+    @PostMapping("/v1/check/user")
+    public boolean checkUser(@RequestBody UserDto userDto) {
+        //중복아이디가 없으면 null
+        UserVO duplCheckId= getUsers(userDto);
+
+        if(duplCheckId==null){
             return true;
         }
         return false;
